@@ -12,4 +12,4 @@ The fluid properties are
 | bromoform  | 2890.0                        | 0.001857       |
 | mercury    | 13545                         | 0.001544       |
 
-The data in von Kármán's textbook is selected from papers by E. Bose, M. Bose, and D. Rauert in the _Physikalische Zeitschrift_ in 1909 and 1911 (see [here](https://babel.hathitrust.org/cgi/pt?id=mdp.39015023919049&seq=442) and [here](https://babel.hathitrust.org/cgi/pt?id=mdp.39015011417709&seq=156)).
+The data in von Kármán's textbook is selected from papers by E. Bose, M. Bose, and D. Rauert in the _Physikalische Zeitschrift_ in [1909](https://babel.hathitrust.org/cgi/pt?id=mdp.39015023919049&seq=442) and [1911](https://babel.hathitrust.org/cgi/pt?id=mdp.39015011417709&seq=156).
