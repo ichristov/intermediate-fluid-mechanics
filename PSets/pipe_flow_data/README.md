@@ -2,7 +2,7 @@
 
 This folder contains four CSV (comma-separated values/text) files of data digitized from [T. von Kármán](https://www.nasonline.org/directory-entry/theodore-von-karman-qaetag/)'s _Aerodynamics_ textbook, reproduced under fair use. 
 
-Each CSV file contains two columns. The first column is the efflux time $t_f$ [in seconds], which is the time it takes to fill up an 8.81 cm³ bucket with the given fluid coming out of a pipe. The second column is the pressure drop $\Delta p$ [in kiloPascals] maintained across the pipe used to fill the bucket.
+Each CSV file contains two columns. The first column is the efflux time $t_f$ [in seconds], which is the time it takes to fill up an 8.81 cm³ bucket with the given fluid coming out of a pipe. The second column is the pressure drop $\Delta p$ [in kilopascals] maintained across the pipe used to fill the bucket.
 
 The fluid properties are 
 | fluid      | $\rho_0$ [kg/m³]              | $\mu_0$ [Pa s] |
