@@ -1,7 +1,7 @@
 # ME 50900 &ndash; Intermediate Fluid Mechanics
 
 This is a GitHub repository for ME 50900 &ndash; Intermediate Fluid Mechanics at Purdue University, as taught by Prof. [Ivan C. Christov](HTTPS://christov.tmnt-lab.org).
-The repository mainly consists of Jupyter notebooks used for hands-on demos, enrichment activities, and problem-set solutions.
+The repository mainly consists of Jupyter notebooks used for hands-on demos in lectures, continuous knowledge acquisition, problem-set solutions, and enrichment activities.
 
 The notebooks are unlikely to be robust and may require updates to run on different platforms, and as underlying Python libraries evolve.
 
