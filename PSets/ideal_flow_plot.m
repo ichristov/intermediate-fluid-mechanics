@@ -1,74 +1,73 @@
-function ideal_flow_plot
-  close all; clear all;
-  
-  h = 0.01; % grid spacing
-  xmax = 0.5;
-  ymax = 0.5;
-  
-  % define a mesh for the domain on which to plot
-  [x,y] = meshgrid(-xmax:h:xmax,-ymax:h:ymax);
-  
-	
-  mu = 1; % strength of the doublet
-	
-  % in Cartesian ones
-  phi = mu*x./(x.^2+y.^2);  % doublet's potential(x,y)
-  psi = -mu*y./(x.^2+y.^2); % doublet's streamfunction(x,y)
+close all; clear all;
 
-  % or, in polar coordinates, but we need to first define r,th in terms of x,y; 
-  % when we call contour, we always send it x,y, but we can evaluate phi, psi using r,th
-  %% note: atan2(y,x) computes arctangent(y/x) taking into account the 
-  %% signs of x and y. this is important for the problems on the PSet. if you
-  %% use atan(y/x), you might get funny results due to the 'branch cut' of atan.
-  r = sqrt(x.^2 + y.^2);
-  th = atan2(y,x);  
-  phi = mu*cos(th)./r;  % doublet's potential(r,th)
-  psi = -mu*sin(th)./r; % doublet's streamfunction(r,th)
-  
-  ur = -mu*cos(th)./(r.^2);
-  uth = -mu*sin(th)./(r.^2);
-  %% IMPORTANT: transform velocities to Cartesian for streamslice 
-  %% (it will accept anything you give it, but your plot won't make sense)
-  ux = ur.*cos(th) - uth.*sin(th);
-  uy = ur.*sin(th) + uth.*cos(th);
-	
-  % OR instead of polar ur, utheta from class, you could also compute
-  % ux, uy from phi(x,y), which requires no transformation of velocity
-  ux = mu*1./(x.^2+y.^2) - mu*x./((x.^2+y.^2).^2).*(2*x);
-  uy = - mu*x./((x.^2+y.^2).^2).*(2*y);
+h = 0.01; % grid spacing
+xmax = 0.5;
+ymax = 0.5;
 
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  figure(1);
-  
-  % contours of equal phi, i.e., equipotential lines
-  % -10:10 specifies the values of phi
-  contour(x,y,phi,-10:10,'r-',LineWidth=1); 
+% define a mesh for the domain on which to plot
+[x,y] = meshgrid(-xmax:h:xmax,-ymax:h:ymax);
 
-  hold on; % don't erase plot on next plot command  
-  
-  % streamlines with velocity field arrows computed by numerically
-  % integrating the equation of streamlines dy/dx = v/u
-  sl = streamslice(x,y,ux,uy,3);
-  sl.set(LineWidth=1);
-  
-  axis tight;
-  axis equal;
-  xlabel('$x$','FontSize',14,'Interpreter',"latex");
-  ylabel('$y$','FontSize',14,'Interpreter',"latex");
-  title('equipotential and stream lines for ideal flow due to doublet','FontSize',10);
 
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  
-  figure(2);
-  
-  % just velocity field arrows but not as nice as streamslice
-  % using an arrow scaling factor (4th argument)
-  % also, take only every 4th point, so there's not too many arrows
-  quiver(x(1:4:end,1:4:end),y(1:4:end,1:4:end), ...
-         ux(1:4:end,1:4:end),uy(1:4:end,1:4:end),5);
-  
-  axis tight;
-  axis equal;
-  xlabel('$x$','FontSize',14,'Interpreter',"latex");
-  ylabel('$y$','FontSize',14,'Interpreter',"latex");
-  title('velocity field of ideal flow due to doublet','FontSize',10);  
+mu = 1; % strength of the doublet
+
+% in Cartesian coordinates
+phi = mu*x./(x.^2+y.^2);  % doublet's potential, phi(x,y)
+psi = -mu*y./(x.^2+y.^2); % doublet's streamfunction, psi(x,y)
+
+% or, in polar coordinates, but we need to first define (r,th) in terms of (x,y); 
+% when we call contour, we always send it x,y, but we can evaluate phi,psi using r,th
+%% note: atan2(y,x) computes arctangent(y/x) taking into account the 
+%% signs of x and y. this is important for the problems on the PSet. if you
+%% use atan(y/x), you might get funny results due to the 'branch cut' of atan.
+r = sqrt(x.^2 + y.^2);
+th = atan2(y,x);  
+phi = mu*cos(th)./r;  % doublet's potential, phi(r,th)
+psi = -mu*sin(th)./r; % doublet's streamfunction, psi(r,th)
+
+vr = -mu*cos(th)./(r.^2);
+vth = -mu*sin(th)./(r.^2);
+%% IMPORTANT: transform velocities to Cartesian for streamslice 
+%% (it will accept anything you give it, but your plot won't make sense)
+vx = vr.*cos(th) - vth.*sin(th);
+vy = vr.*sin(th) + vth.*cos(th);
+
+% OR instead of polar ur, utheta from class, you could also compute
+% ux, uy from phi(x,y), which requires no transformation of velocity
+vx = mu*1./(x.^2+y.^2) - mu*x./((x.^2+y.^2).^2).*(2*x);
+vy = - mu*x./((x.^2+y.^2).^2).*(2*y);
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+figure(1);
+
+% contours of equal phi, i.e., equipotential lines
+% -10:10 specifies the values of phi
+contour(x,y,phi,-10:10,'r-',LineWidth=1); 
+
+hold on; % don't erase plot on next plot command  
+
+% streamlines with velocity field arrows computed by numerically
+% integrating the governing equation of streamlines, dy/dx = v/u
+sl = streamslice(x,y,vx,vy,3);
+sl.set(LineWidth=1);
+
+axis tight;
+axis equal;
+xlabel('$x$','FontSize',14,'Interpreter',"latex");
+ylabel('$y$','FontSize',14,'Interpreter',"latex");
+title('equipotential and stream lines for ideal flow due to doublet','FontSize',10);
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+figure(2);
+
+% just velocity field arrows but not as nice as streamslice
+% using an arrow scaling factor (4th argument)
+% also, take only every 4th point, so there's not too many arrows
+quiver(x(1:4:end,1:4:end),y(1:4:end,1:4:end), ...
+       vx(1:4:end,1:4:end),vy(1:4:end,1:4:end),5);
+
+axis tight;
+axis equal;
+xlabel('$x$','FontSize',14,'Interpreter',"latex");
+ylabel('$y$','FontSize',14,'Interpreter',"latex");
+title('velocity field of ideal flow due to doublet','FontSize',10);  
