@@ -20,6 +20,7 @@ Getting started (rough grouping of notebooks based on course topics):
     - [Rectangular Duct](extras/Rectangular_Duct.ipynb) &mdash; Fourier series solution for pressure-driven flow in a 3D duct
 * Other topics:
     - [Asymptotic Suction Flow](Asymptotic_Suction_Flow.ipynb) &mdash; a fully-developed flow field with two velocity components
+    - [Slipper Pad Bearing](Slipper_Pad_Bearing.ipynb) &mdash; a classic application of Reynolds' lubrication equation
     - [Ideal Flows 2D](Ideal_Flows_2D.ipynb) &mdash; having fun with functions of a complex variable
     - [Boundary Layers](Boundary_Layers.ipynb) &mdash; everything you need to know about Blasius' problem
     - [Stokes Flows 2D](Stokes_Flows_2D.ipynb) &mdash; having fun with the biharmonic equation in the plane, from Taylor's scraper to Moffatt's eddies
