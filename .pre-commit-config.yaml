@@ -1,0 +1,23 @@
+# .pre-commit-config.yaml
+repos:
+  # Basic code formatting and linting
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+      - id: check-merge-conflict
+
+  # Jupyter notebook stripping (widgets only)
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.7.1
+    hooks:
+      - id: nbstripout
+        args: [
+          '--keep-output',
+          '--keep-count',
+          '--extra-keys=metadata.widgets cell.metadata.widgets cell.outputs.data.application/vnd.jupyter.widget-view+json cell.outputs.data.application/vnd.jupyter.widget-state+json'
+        ]
+        files: \.ipynb$
