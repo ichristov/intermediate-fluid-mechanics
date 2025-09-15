@@ -26,13 +26,13 @@ Getting started (rough grouping of notebooks based on course topics):
     - [Stokes Flows 2D](Stokes_Flows_2D.ipynb) &mdash; having fun with the biharmonic equation in the plane, from Taylor's scraper to Moffatt's eddies
     - [Stokes Flow Past Sphere](Stokes_Flow_Past_Sphere.ipynb) &mdash; heavy-duty calculations in spherical coordinates
     - [Dimensional Analysis](Dimensional_Analysis.ipynb) &mdash; Buckingham's $\Pi$ theorem is just the rank&ndash;nullity theorem in disguise
-    - [Taylor and the Bomb](Taylor_and_the_Bomb) &mdash; how G. I. Taylor estimated the energetic yield of the Trinity test
+    - [Taylor and the Bomb](Taylor_and_the_Bomb.ipynb) &mdash; how G. I. Taylor estimated the energetic yield of the Trinity test
 
 The notebooks are unlikely to be robust and may require updates to run on different platforms, and as underlying Python libraries evolve.
 
 Some resources for getting started:
 * Google Colaboratory lets open Jupyter notebooks from GitHub and run them in the cloud from your browser: https://colab.research.google.com.
-    - See the [getting started with Markdown](https://www.markdownguide.org/getting-started/) guide for how to write nice discussion between your computational cells in the Jupyter notebook. 
+    - See the [getting started with Markdown](https://www.markdownguide.org/getting-started/) guide for how to write nice discussion between your computational cells in the Jupyter notebook.
     - More advanced programmers may find the following links useful: [Introduction to Git in VS Code](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git), [Jupyter Notebooks in VS Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks).
 * Check out [PY4E](https://www.py4e.com) &ndash; Python for Everybody &ndash; for free materials for learning how to program in Python.
     - The first few lectures of [ME 297 - Introduction to Data Science for Mechanical Engineers](https://github.com/PurdueMechanicalEngineering/me-297-intro-to-data-science ) also cover getting started with Scientific Python.
