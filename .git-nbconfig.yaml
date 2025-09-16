@@ -1,5 +1,4 @@
 # .git-nbconfig.yaml
-# Configuration for nbstripout-fast to only strip widgets
 
 # Keep most notebook content
 keep_output: true

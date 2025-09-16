@@ -18,6 +18,6 @@ repos:
         args: [
           '--keep-output',
           '--keep-count',
-          '--extra-keys=metadata.widgets cell.metadata.widgets cell.outputs.data.application/vnd.jupyter.widget-view+json cell.outputs.data.application/vnd.jupyter.widget-state+json'
+          '--extra-keys=metadata.widgets cell.metadata.widgets cell.outputs.data.application/vnd.jupyter.widget-view+json cell.outputs.data.application/vnd.jupyter.widget-state+json cell.outputs.data.text/html cell.outputs.data.application/javascript'
         ]
         files: \.ipynb$
