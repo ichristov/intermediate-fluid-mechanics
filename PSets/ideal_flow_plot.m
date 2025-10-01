@@ -14,19 +14,19 @@ mu = 1; % strength of the doublet
 phi = mu*x./(x.^2+y.^2);  % doublet's potential, phi(x,y)
 psi = -mu*y./(x.^2+y.^2); % doublet's streamfunction, psi(x,y)
 
-% or, in polar coordinates, but we need to first define (r,th) in terms of (x,y); 
+% or, in polar coordinates, but we need to first define (r,th) in terms of (x,y);
 % when we call contour, we always send it x,y, but we can evaluate phi,psi using r,th
-%% note: atan2(y,x) computes arctangent(y/x) taking into account the 
+%% note: atan2(y,x) computes arctangent(y/x) taking into account the
 %% signs of x and y. this is important for the problems on the PSet. if you
 %% use atan(y/x), you might get funny results due to the 'branch cut' of atan.
 r = sqrt(x.^2 + y.^2);
-th = atan2(y,x);  
+th = atan2(y,x);
 phi = mu*cos(th)./r;  % doublet's potential, phi(r,th)
 psi = -mu*sin(th)./r; % doublet's streamfunction, psi(r,th)
 
 vr = -mu*cos(th)./(r.^2);
 vth = -mu*sin(th)./(r.^2);
-%% IMPORTANT: transform velocities to Cartesian for streamslice 
+%% IMPORTANT: transform velocities to Cartesian for streamslice
 %% (it will accept anything you give it, but your plot won't make sense)
 vx = vr.*cos(th) - vth.*sin(th);
 vy = vr.*sin(th) + vth.*cos(th);
@@ -41,9 +41,9 @@ figure(1);
 
 % contours of equal phi, i.e., equipotential lines
 % -10:10 specifies the values of phi
-contour(x,y,phi,-10:10,'r-',LineWidth=1); 
+contour(x,y,phi,-10:10,'r-',LineWidth=1);
 
-hold on; % don't erase plot on next plot command  
+hold on; % don't erase plot on next plot command
 
 % streamlines with velocity field arrows computed by numerically
 % integrating the governing equation of streamlines, dy/dx = v/u
@@ -70,4 +70,4 @@ axis tight;
 axis equal;
 xlabel('$x$','FontSize',14,'Interpreter',"latex");
 ylabel('$y$','FontSize',14,'Interpreter',"latex");
-title('velocity field of ideal flow due to doublet','FontSize',10);  
+title('velocity field of ideal flow due to doublet','FontSize',10);
