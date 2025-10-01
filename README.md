@@ -28,7 +28,9 @@ Getting started (rough grouping of notebooks based on course topics):
     - [Dimensional Analysis](Dimensional_Analysis.ipynb) &mdash; Buckingham's $\Pi$ theorem is just the rank&ndash;nullity theorem in disguise
     - [Taylor and the Bomb](Taylor_and_the_Bomb.ipynb) &mdash; how G. I. Taylor estimated the energetic yield of the Trinity test
 
-The notebooks are unlikely to be robust and may require updates to run on different platforms, and as underlying Python libraries evolve.
+:warning: The notebooks are unlikely to be robust and may require updates to run on different platforms, and as underlying Python libraries evolve.
+
+:memo: Also, checkout the [handouts](handouts) folder.
 
 Some resources for getting started:
 * Google Colaboratory lets open Jupyter notebooks from GitHub and run them in the cloud from your browser: https://colab.research.google.com.
