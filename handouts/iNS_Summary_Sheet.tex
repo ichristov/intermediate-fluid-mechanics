@@ -1,0 +1,142 @@
+\documentclass[12pt,landscape]{article}
+\usepackage{amsmath}
+\usepackage{pdflscape}
+\usepackage{color}
+\usepackage[margin=1in]{geometry}
+
+\usepackage{fancyhdr}
+\usepackage{totpages}
+
+\fancyhead[L]{Purdue University, ME 50900}
+\fancyhead[R]{Prof.\ Ivan C.\ Christov}
+\fancyfoot[C]{Page \thepage\ of \ref*{TotPages}}
+
+\usepackage{accents}
+
+\DeclareMathOperator{\tr}{tr}
+
+\usepackage[most]{tcolorbox}
+
+\newtcolorbox{empheqboxed}{colback=gray!5,
+ colframe=black,
+ width=\textwidth,
+ sharpish corners,
+ top=-2mm, % default value 2mm
+}
+
+\begin{document}
+
+\thispagestyle{fancy}
+
+\Large
+
+\begin{minipage}[t]{0.45\textwidth}
+\centerline{\fbox{Compressible flow}}
+\begin{align}
+\frac{\partial \rho}{\partial t} + \nabla\cdot(\rho \underline{v}) &= 0 \tag*{\text{\small[COM v1]}}\\
+\partial_t\rho + \partial_j (\rho v_j) &= 0 \nonumber
+\end{align}
+\textbf{\emph{equivalently}}
+\[ \frac{D \rho}{D t} + \rho\nabla\cdot\underline{v} = 0 \eqno\text{\small[COM v2]}\]
+\[ \partial_t\rho + v_j\partial_j \rho + \rho \partial_j v_j = 0 \]
+
+\noindent\makebox[\linewidth]{\rule{\textwidth}{1pt}}
+
+\vspace{-3mm}
+
+\[ \frac{\partial (\rho \underline{v})}{\partial t} + \nabla\cdot(\rho \underline{v} \, \underline{v}) = \rho\underline{F} + \nabla\cdot\underline{\underline{T}}
+\eqno\text{\small[COLM v1]}\]
+\[ \partial_t (\rho v_i) + \partial_j(\rho v_j v_i) = \rho F_i + \partial_j T_{ji} \]
+
+\textbf{\emph{equivalently}} (using COM to simplify)
+\[ \rho\frac{D \underline{v}}{D t} = \rho\underline{F} + \nabla\cdot\underline{\underline{T}} \eqno\text{\small[COLM v2]}\]
+\[\rho \left(\partial_t v_i + v_j\partial_j v_i\right) = \rho F_i + \partial_j T_{ji}\]
+
+\noindent\makebox[\linewidth]{\rule{\textwidth}{1pt}}
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+\centerline{\fbox{Incompressible flow}}
+
+\begin{align}
+\nabla\cdot \underline{v} &= 0 \tag*{\text{\small[COM]}}\\
+\partial_j v_j &= 0 \nonumber
+\end{align}
+
+\noindent\makebox[\linewidth]{\rule{\textwidth}{1pt}}
+
+\[ \rho_0\left[\frac{\partial \underline{v}}{\partial t} + \nabla\cdot(\underline{v} \,\underline{v})\right] = \rho_0\underline{F} + \nabla\cdot\underline{\underline{T}}
+\eqno\text{\small[COLM v1]}\]
+\[ \; \rho_0 \left[\partial_t v_i + \partial_j(v_j v_i)\right] = \rho_0 F_i + \partial_j T_{ji} \]
+
+\textbf{\emph{equivalently}} (using COM to simplify)
+\[ \rho_0\frac{D \underline{v}}{D t} = \rho_0\underline{F} + \nabla\cdot\underline{\underline{T}} \eqno\text{\small[COLM v2]}\]
+\[\rho_0 \left(\partial_t v_i + v_j\partial_j v_i\right) = \rho_0 F_i + \partial_j T_{ji}\]
+
+\noindent\makebox[\linewidth]{\rule{\textwidth}{1pt}}
+
+Don't be deceived because the last eq.\ looks just like its left counterpart. Here $\rho_0=const.$ (we're not solving for it), on the left $\rho = \rho(x,y,z,t)$ (we're solving for it).
+
+\end{minipage}
+
+
+\clearpage
+
+\thispagestyle{fancy}
+
+
+\noindent
+The stress tensor of a \textbf{\emph{Newtonian fluid}} ($\undertilde{\text{terms}}$ vanish for \emph{incompressible} flows) in Cartesian coords $(x_1,x_2,x_3)=(x,y,z)$ with velocity $\underline{v} = \big(v_1(x,y,z),v_2(x,y,z),v_3(x,y,z)\big)$:
+\begin{align}
+\hspace{-5mm}
+\underline{\underline{T}}
+&=
+\begin{pmatrix}
+-p & 0 & 0\\
+0 & -p & 0\\
+0 & 0 & -p
+\end{pmatrix} +
+\begin{pmatrix}
+2\mu \frac{\partial v_1}{\partial x} - \frac{2}{3}\mu\undertilde{\nabla\cdot\underline{v}} & \mu\big(\frac{\partial v_2}{\partial x} + \frac{\partial v_1}{\partial y}\big) & \mu\big(\frac{\partial v_3}{\partial x} + \frac{\partial v_1}{\partial z}\big)\\[3mm]
+\mu\big(\frac{\partial v_1}{\partial y} + \frac{\partial v_2}{\partial x}\big) & 2\mu \frac{\partial v_2}{\partial y} - \frac{2}{3}\mu\undertilde{\nabla\cdot\underline{v}} & \mu\big(\frac{\partial v_3}{\partial y} + \frac{\partial v_2}{\partial z}\big)\\[3mm]
+\mu\big(\frac{\partial v_1}{\partial z} + \frac{\partial v_3}{\partial x}\big) & \mu\big(\frac{\partial v_2}{\partial z} + \frac{\partial v_3}{\partial y}\big)  & 2\mu \frac{\partial v_3}{\partial z} - \frac{2}{3}\mu\undertilde{\nabla\cdot\underline{v}}
+\end{pmatrix}
+\nonumber\\[3mm]
+T_{ij} &= -p\delta_{ij} - \tfrac{2}{3}\mu \partial_k v_k \delta_{ij} + 2\mu\partial_{(i}v_{j)}, \tag*{\text{\small[\underline{total} (Cauchy) stress tensor]}}
+\end{align}
+The Newtonian \emph{viscous} stress tensor is $\tau_{ij} = - \tfrac{2}{3}\mu \partial_k v_k \delta_{ij} + 2\mu\partial_{(i}v_{j)}$.
+%\begin{align}
+%\underline{\underline{\tau}}
+%&=
+%\begin{pmatrix}
+%2\mu \frac{\partial v_1}{\partial x} - \frac{2}{3}\undertilde{\mu{\nabla\cdot\underline{v}}} & \mu\big(\frac{\partial v_1}{\partial y} + \frac{\partial v_2}{\partial x}\big) & \mu\big(\frac{\partial v_1}{\partial z} + \frac{\partial v_3}{\partial x}\big)\\[3mm]
+%\mu\big(\frac{\partial v_2}{\partial x} + \frac{\partial v_1}{\partial y}\big) & 2\mu \frac{\partial v_2}{\partial y} - \frac{2}{3}\undertilde{\mu{\nabla\cdot\underline{v}}} & \mu\big(\frac{\partial v_2}{\partial z} + \frac{\partial v_3}{\partial y}\big)\\[3mm]
+%\mu\big(\frac{\partial v_3}{\partial x} + \frac{\partial v_1}{\partial z}\big) & \mu\big(\frac{\partial v_3}{\partial y} + \frac{\partial v_2}{\partial z}\big)  & 2\mu \frac{\partial v_3}{\partial z} - \frac{2}{3}\mu\undertilde{\nabla\cdot\underline{v}}
+%\end{pmatrix}
+%\nonumber\\[3mm]
+%\tau_{ij} &= - \tfrac{2}{3}\mu \partial_k v_k \delta_{ij} + 2\mu\partial_{(i}v_{j)} \tag*{\text{\small[viscous (Newtonian) stress tensor]}}
+%\end{align}
+\\
+\underline{Note:} $\underline{\underline{\tau}}$ has \emph{nonzero} diagonal components, however, because of our \emph{definition} $p = -\frac{1}{3}\tr \underline{\underline{T}} = -\frac{1}{3}T_{ii}$ we must have $\tr\underline{\underline{\tau}} = \tau_{ii} = \tau_{11}+\tau_{22}+\tau_{33} = 0$
+%Indeed,
+%\[%\hspace{-1cm}
+%\tau_{ii} %= 2\mu \frac{\partial u}{\partial x} - \frac{2}{3}\mu\nabla\cdot\underline{v} + 2\mu \frac{\partial v}{\partial y} - \frac{2}{3}\mu\nabla\cdot\underline{v} + 2\mu \frac{\partial w}{\partial z} - \frac{2}{3}\mu\nabla\cdot\underline{v}
+%= 2\mu\left(\frac{\partial v_1}{\partial x}+\frac{\partial v_2}{\partial y}+\frac{\partial v_3}{\partial z} %\right) - 2\mu {\nabla\cdot\underline{v}} = 0 \eqno\text{\small[trace of viscous stress tensor]}
+%\]
+for \emph{both compressible and incompressible} flows, requiring the use of Stokes' hypothesis (that is, $\lambda = -2\mu/3$).
+\\
+\underline{Note:} $\rho$ and $\mu$ do \emph{not} have to be constant here, and this fluid could be compressible, in which case an \emph{equation of state} is needed to relate $p$ and $\rho$ (assuming isothermal conditions).
+
+
+\vfill
+
+For constant properties, $\rho=\rho_0$ and $\mu=\mu_0$, using the above $\underline{\underline{T}}$ in COLM v2, we obtain the \textbf{\emph{Navier--Stokes equations for an {incompressible flow of a Newtonian} fluid}}:
+\begin{empheqboxed}
+\begin{align}
+&\nabla\cdot\underline{v} = 0,\qquad \rho_0 \frac{D \underline{v}}{D t} = \rho_0 \underline{F} -\nabla p + \mu_0 \nabla^2\underline{v}\qquad\qquad [\rho_0,\mu_0=const.] \tag*{\text{\small[iNS]}}\\[3mm]
+&\partial_j v_j = 0, \hspace{38pt} \rho_0 \left(\partial_t v_i + v_j  \partial_j v_i \right) = \rho_0 F_i - \partial_i p + \mu_0 \partial_j \partial_j v_i \nonumber
+\end{align}
+\end{empheqboxed}
+
+\end{document}
