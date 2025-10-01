@@ -3,7 +3,7 @@
 This is a GitHub repository for ME 50900 &ndash; Intermediate Fluid Mechanics at Purdue University, as taught by Prof. [Ivan C. Christov](HTTPS://christov.tmnt-lab.org).
 The repository mainly consists of Jupyter notebooks used for hands-on demos in lectures, continuous knowledge acquisition, problem-set solutions, and enrichment activities.
 
-Getting started (rough grouping of notebooks based on course topics):
+:rocket: Getting started (rough grouping of notebooks based on course topics):
 * General:
     - [Flow Visualization](extras/Flow_Visualization.ipynb) &mdash; streamlines, pathlines, streaklines
     - [Velocity Field in Polar Coords](Velocity_Field_in_Polar_Coords.ipynb) &mdash; how to plot planar (2D) velocity fields given in terms of polar velocity components
@@ -32,7 +32,7 @@ Getting started (rough grouping of notebooks based on course topics):
 
 :memo: Also, checkout the [handouts](handouts) folder.
 
-Some resources for getting started:
+:books: Some resources for self-learning Jupyter, Python and LaTeX:
 * Google Colaboratory lets open Jupyter notebooks from GitHub and run them in the cloud from your browser: https://colab.research.google.com.
     - See the [getting started with Markdown](https://www.markdownguide.org/getting-started/) guide for how to write nice discussion between your computational cells in the Jupyter notebook.
     - More advanced programmers may find the following links useful: [Introduction to Git in VS Code](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git), [Jupyter Notebooks in VS Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks).
