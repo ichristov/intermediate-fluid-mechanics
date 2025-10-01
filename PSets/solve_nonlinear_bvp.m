@@ -8,20 +8,20 @@ function solve_nonlinear_bvp
   % Specify the value of eta that we shall consider to be 'infinity'
   % for all practical purposes.
   inf = 6;
-  
+
   % How many grid points we want to use between 0 and inf.
   ngrid = 100;
 
   % Constant guesses for initial function shape and its derivatives
   % on the domain for eta from 0 to inf using ngrid points;
   %
-  % WARNING: if inf is too large, these initial gueses are no good, 
+  % WARNING: if inf is too large, these initial gueses are no good,
   % and you'll get a different solution branch of the nonlinear ODE!
   %
   % [0 1 1] correspond to f = 0, f'= 1, and f'' = 1.
   solinit = bvpinit(linspace(0,inf,ngrid),[0 1 1]);
 
-  % To tighten the tolerances on the solver and the make the 
+  % To tighten the tolerances on the solver and the make the
   % numerical solution more accurate.
   options = bvpset('RelTol',1e-9,'Stats','on');
 
@@ -36,27 +36,27 @@ function solve_nonlinear_bvp
   optopt = optimoptions('fsolve','OptimalityTolerance',1e-9,...
                         'Display','off');
   eta99 = fsolve(@(eta)fp99eq(eta,sol),1,optopt);
-  
+
   %% We can check if our choice of infinity was good by computing on
   %% larger domains up to 2*inf, and seeing if f''(0) is converging.
   for infnew = inf:2*inf
-    % 'bvpxtend' allows us to re-use the previous domain's solution as 
+    % 'bvpxtend' allows us to re-use the previous domain's solution as
     % a good initial guess for the solution on the new domain.
     solinit = bvpxtend(sol,infnew);
     sol = bvp4c(@fsode,@fsbc,solinit,options);
     f = sol.y;
-    eta99 = fsolve(@(eta)fp99eq(eta,sol),1,optopt);    
+    eta99 = fsolve(@(eta)fp99eq(eta,sol),1,optopt);
     fprintf('With inf = %g, f''''(0) = %7.10f and eta_99%% = %7.10f.\n\n',...
             infnew,f(3,1),eta99);
   end
-  
+
   %% Make a plot of the solution from the longest domain used.
   % Evaluate numerical solutions for f, f' and f'' on a grid of [0 2inf].
   eta = linspace(0,2*inf,ngrid);
   f = deval(sol,eta,1);
   fprime = deval(sol,eta,2);
   fdoubleprime = deval(sol,eta,3);
-  
+
   plot(fprime,eta,'-k','LineWidth',2);
   hold on;
   plot(0.5*(eta.*fprime - f),eta,'b--','LineWidth',2);
@@ -79,10 +79,10 @@ function solve_nonlinear_bvp
 function dfdeta = fsode(eta,f)
   dfdeta = [ f(2)
              f(3)
-             -1/2*f(1)*f(3) ];      
+             -1/2*f(1)*f(3) ];
 
 %% The BCs: f(0) = 0, f'(0) = 0, f'(finf) - 1 = 0
-%% the solver expects BCs in the form stuff(f) = 0 
+%% the solver expects BCs in the form stuff(f) = 0
 %% with f0 an finf being the values at the two endpoints of the domain.
 function res = fsbc(f0,finf)
   res = [ f0(1) - 0
