@@ -1,10 +1,13 @@
-\documentclass[10pt]{article}
+\documentclass[10pt,landscape]{article}
 \usepackage[margin=0.5in]{geometry}
 \usepackage{pdflscape}
+
 \usepackage{amsmath,amssymb,amsfonts}
+
 \usepackage{booktabs,makecell}
 \usepackage{footnote}
 \makesavenoteenv{tabular}
+
 \usepackage{tikz}
 \usetikzlibrary{decorations.markings, arrows.meta, bending}
 % custom arrow styles for tikz
@@ -45,14 +48,18 @@
 
 \begin{document}
 
-\pagestyle{empty}
+\thispagestyle{empty}
 
-\begin{landscape}
+{\noindent Purdue University, ME 50900 \hfill Prof.\ Ivan C.\ Christov}\\[-2.5mm]
+\noindent\makebox[\textwidth]{\rule{\textwidth}{0.5pt}}
+
+\medskip
 
 \centerline{\textbf{A Brief Handbook of Elementary Ideal Flows}\footnote{Inspired by Tables 12.1 and 12.2 of Granger's \emph{Fluid Mechanics} (Dover Publications, 2012). Flow 1--5 are the ``building blocks'' and the rest are superposition examples.}}
 
-\begin{center}
-\resizebox{1.2\textwidth}{!}{%
+\medskip
+
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{l @{\qquad} l @{\qquad} l @{\qquad} l @{\qquad} l}
 \toprule
 \toprule
@@ -164,7 +171,7 @@
 \midrule
 \midrule
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makecell[l]{\circled{6.} Flow around a Rankine body\\ \phantom{\circled{6.}~} ($a$ is a real number/horizontal shift) \\ \qquad $\circled{1} + \circled{2} - \circled{2}$ \\  \phantom{$\frac{Q}{2\pi}$}} & \makecell[l]{$U z + \dfrac{Q}{2 \pi} \log\left(\dfrac{z+a}{z-a}\right)$\\ ~ \\ \phantom{$\frac{Q}{2\pi}$}}  & \makecell[l]{$Ux + \dfrac{Q}{4 \pi} \ln\left[\dfrac{(x+a)^2+y^2}{(x-a)^2+y^2}\right]$\\ ~ \\ ...} & \makecell[l]{$Uy + \dfrac{Q}{2 \pi}\left[\tan^{-1}\left(\dfrac{y}{x+a}\right)-\tan^{-1}\left(\dfrac{y}{x-a}\right)\right]$\\ ~ \\ ...} &
+\makecell[l]{\circled{6.} Flow around a Rankine body\\ \phantom{\circled{6.}~} ($a$ is a real number/horizontal shift) \\[1mm] \qquad $\circled{1}\{\alpha=0\} + \circled{2}\{z_0=-a\} - \circled{2}\{z_0=a\}$ \\  \phantom{$\frac{Q}{2\pi}$}} & \makecell[l]{$U z + \dfrac{Q}{2 \pi} \log\left(\dfrac{z+a}{z-a}\right)$\\ ~ \\ \phantom{$\frac{Q}{2\pi}$}}  & \makecell[l]{$Ux + \dfrac{Q}{4 \pi} \ln\left[\dfrac{(x+a)^2+y^2}{(x-a)^2+y^2}\right]$\\ ~ \\ ...} & \makecell[l]{$Uy + \dfrac{Q}{2 \pi}\left[\tan^{-1}\left(\dfrac{y}{x+a}\right)-\tan^{-1}\left(\dfrac{y}{x-a}\right)\right]$\\ ~ \\ ...} &
 \begin{tikzpicture}[scale=1, baseline=-0.1ex]
     % Draw the object as a pill-shaped, rounded rectangle
     \fill[gray!90, draw=black, rounded corners=0.4cm] (-0.8,-0.4) rectangle (0.8,0.4);
@@ -186,7 +193,7 @@
   \\
 \midrule
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makecell[l]{\circled{7.} Flow around a cylinder with circulation\\ \qquad $\circled{1} + \circled{4} - \circled{3}$ \\ \phantom{$\frac{\Gamma}{2\pi}$} } & \makecell[l]{$U\left(z+\dfrac{R^2}{z}\right) + \dfrac{i\Gamma}{2 \pi} \log z$ \\ ~ \\ ~} & \makecell[l]{... \\ ~ \\ $U\left(1+\dfrac{R^2}{r^2}\right) r\cos\theta - \dfrac{\Gamma}{2 \pi} \theta$} & \makecell[l]{... \\ ~ \\ $U\left(1-\dfrac{R^2}{r^2}\right) r \sin\theta + \dfrac{\Gamma}{2 \pi} \ln r$} &
+\makecell[l]{\circled{7.} Flow around a cylinder with circulation\\[1mm] \qquad $\circled{1}\{\alpha=0\} + \circled{4}\{\alpha=0,m=UR^2,z_0=0\}- \circled{3}\{z_0=0\}$ \\ \phantom{$\frac{\Gamma}{2\pi}$} } & \makecell[l]{$U\left(z+\dfrac{R^2}{z}\right) + \dfrac{i\Gamma}{2 \pi} \log z$ \\ ~ \\ ~} & \makecell[l]{... \\ ~ \\ $U\left(1+\dfrac{R^2}{r^2}\right) r\cos\theta - \dfrac{\Gamma}{2 \pi} \theta$} & \makecell[l]{... \\ ~ \\ $U\left(1-\dfrac{R^2}{r^2}\right) r \sin\theta + \dfrac{\Gamma}{2 \pi} \ln r$} &
 \begin{tikzpicture}[scale=1, baseline=-0.1ex]
     % Draw the circular object with a black border
     \filldraw[fill=gray!90, draw=black] (0,0) circle (0.4);
@@ -210,9 +217,7 @@
 \bottomrule
 \end{tabular}
 }
-\end{center}
 \footnotetext{The case $n=2$ corresponds to stagnation-point flow onto a horizontal plate.}
-\end{landscape}
 
 %%%% A few examples not ready for public consumption yet
 
