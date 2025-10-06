@@ -60,15 +60,15 @@
 \medskip
 
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{l @{\qquad} l @{\qquad} l @{\qquad} l @{\qquad} l}
+\begin{tabular}{l @{\qquad} l @{\qquad} l @{\qquad} l @{\qquad} c}
 \toprule
 \toprule
 \textbf{Elementary flow} & \textbf{Complex potential}, $F = \phi + i \psi$ & \textbf{Potential}, $\phi(x, y)$ & \textbf{Streamfunction}, $\psi(x, y)$ & \textbf{Sketch of streamlines} \\
 \midrule
 \midrule
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makecell[l]{\circled{1.} Uniform flow in the direction $\alpha$\\ ~ \\ \phantom{$U$}} & \makecell[l]{$Az$ with $A=Ue^{-i \alpha}$\\ where $U$ is real but $A$ is complex\\ ~ \\ \phantom{$U$}} & \makecell[l]{$U(x \cos \alpha+ y \sin \alpha)$ \\ ~ \\ {or $U r \cos (\theta-\alpha)$}\\ ~ } & \makecell[l]{$U(y \cos \alpha- x \sin \alpha)$ \\ ~ \\  {or $U r \sin (\theta-\alpha)$}\\ ~ } &
-\begin{tikzpicture}[scale=1, baseline=2.5ex]
+\makecell[l]{\circled{1.} Uniform flow at angle $\alpha$ to the horizontal\\ ~ \\ \phantom{$U$}} & \makecell[l]{$Az$ with $A=Ue^{-i \alpha}$\\ ~ \\ \textcolor{gray}{$U$ is real but $A$ is complex}} & \makecell[l]{$U(x \cos \alpha+ y \sin \alpha)$ \\ ~ \\ {or $U r \cos (\theta-\alpha)$} } & \makecell[l]{$U(y \cos \alpha- x \sin \alpha)$ \\ ~ \\  {or $U r \sin (\theta-\alpha)$} } &
+\begin{tikzpicture}[scale=1, baseline=5ex]
     % Axes
     \draw[->, line width=1pt, gray] (-1.75,0) -- (2,0) node[right] {$x$};
     \draw[->, line width=1pt, gray] (0,-1) -- (0,2) node[above] {$iy$};
@@ -159,7 +159,7 @@
  \\
 \midrule
 \makecell[l]{\circled{5.} Flow in a corner\footnotemark\ of angle $\pi/n$\\ ~ \\ \phantom{$U$}} & \makecell[l]{$A z^{n}$\\ ~ \\ \phantom{$U$}} & \makecell[l]{ ... \\ ~ \\ or $U r^n \cos(n\theta)$} & \makecell[l]{ ... \\ ~ \\ or $U r^n \sin(n\theta)$} &
-\begin{tikzpicture}[scale=1, baseline=7ex]
+\begin{tikzpicture}[scale=1, baseline=8ex]
     % Define angle
     \def\angle{45}
 
