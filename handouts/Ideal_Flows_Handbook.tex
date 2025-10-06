@@ -183,8 +183,8 @@
 \midrule
 \midrule
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makecell[l]{\circled{6.} Flow around a Rankine body\\ \phantom{\circled{6.}} ($a$ is a real number/horizontal shift) \\[1mm] \qquad $\circled{1}\{\alpha=0\} + \circled{2}\{z_0=-a\} - \circled{2}\{z_0=a\}$ \\  \phantom{$\frac{Q}{2\pi}$}} & \makecell[l]{$U z + \dfrac{Q}{2 \pi} \log\left(\dfrac{z+a}{z-a}\right)$\\ ~ \\ \phantom{$\frac{Q}{2\pi}$}}  & \makecell[l]{$Ux + \dfrac{Q}{4 \pi} \ln\left[\dfrac{(x+a)^2+y^2}{(x-a)^2+y^2}\right]$\\ ~ \\ ...} & \makecell[l]{$Uy + \dfrac{Q}{2 \pi}\left[\tan^{-1}\left(\dfrac{y}{x+a}\right)-\tan^{-1}\left(\dfrac{y}{x-a}\right)\right]$\\ ~ \\ ...} &
-\begin{tikzpicture}[scale=1, baseline=-0.1ex]
+\makecell[l]{\circled{6.} Flow past a Rankine body\\ \phantom{\circled{6.}} ($a$ is a real number/horizontal shift) \\[1mm] \qquad $\circled{1}\{\alpha=0\} + \circled{2}\{z_0=-a\} - \circled{2}\{z_0=a\}$} & \makecell[l]{$U z + \dfrac{Q}{2 \pi} \log\left(\dfrac{z+a}{z-a}\right)$\\[1mm] ~ }  & \makecell[l]{$Ux + \dfrac{Q}{4 \pi} \ln\left[\dfrac{(x+a)^2+y^2}{(x-a)^2+y^2}\right]$\\[1mm] ~ } & \makecell[l]{$Uy + \dfrac{Q}{2 \pi}\left[\tan^{-1}\left(\dfrac{y}{x+a}\right)-\tan^{-1}\left(\dfrac{y}{x-a}\right)\right]$\\[1mm] ~ } &
+\begin{tikzpicture}[scale=1, baseline=-1.5ex]
     % Draw the object as a pill-shaped, rounded rectangle
     \fill[gray!90, draw=black, rounded corners=0.4cm] (-0.8,-0.4) rectangle (0.8,0.4);
 
@@ -205,7 +205,7 @@
   \\
 \midrule
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makecell[l]{\circled{7.} Flow around a cylinder with circulation\\[1mm] \qquad $\circled{1}\{\alpha=0\} + \circled{4}\{\alpha=0,m=UR^2,z_0=0\}- \circled{3}\{z_0=0\}$ \\ \phantom{$\frac{\Gamma}{2\pi}$} } & \makecell[l]{$U\left(z+\dfrac{R^2}{z}\right) + \dfrac{i\Gamma}{2 \pi} \log z$ \\ ~ \\ ~} & \makecell[l]{... \\ ~ \\ $U\left(1+\dfrac{R^2}{r^2}\right) r\cos\theta - \dfrac{\Gamma}{2 \pi} \theta$} & \makecell[l]{... \\ ~ \\ $U\left(1-\dfrac{R^2}{r^2}\right) r \sin\theta + \dfrac{\Gamma}{2 \pi} \ln r$} &
+\makecell[l]{\circled{7.} Flow past a cylinder with circulation\\[1mm] \qquad $\circled{1}\{\alpha=0\} + \circled{4}\{\alpha=0,m=UR^2,z_0=0\}- \circled{3}\{z_0=0\}$ \\ \phantom{$\frac{\Gamma}{2\pi}$} } & \makecell[l]{$U\left(z+\dfrac{R^2}{z}\right) + \dfrac{i\Gamma}{2 \pi} \log z$ \\ ~ \\ ~} & \makecell[l]{... \\ ~ \\ $U\left(1+\dfrac{R^2}{r^2}\right) r\cos\theta - \dfrac{\Gamma}{2 \pi} \theta$} & \makecell[l]{... \\ ~ \\ $U\left(1-\dfrac{R^2}{r^2}\right) r \sin\theta + \dfrac{\Gamma}{2 \pi} \ln r$} &
 \begin{tikzpicture}[scale=1, baseline=-0.1ex]
     % Draw the circular object with a black border
     \filldraw[fill=gray!90, draw=black] (0,0) circle (0.4);
@@ -235,7 +235,7 @@
 
 %\begin{tabular}{l @{\qquad} l @{\qquad} l @{\qquad} l @{\qquad} l}
 %\midrule
-%\makecell[l]{\circled{x.} Flow around a half body \\ \qquad \circled{1} + \circled{2} \\ \phantom{$\frac{Q}{2\pi}$}} & \makecell[l]{$U z + \dfrac{Q}{2 \pi} \log z$\\ ~ \\ \phantom{$\frac{Q}{2\pi}$}}  & \makecell[l]{... \\ ~ \\ ...} & \makecell[l]{... \\ ~ \\ ...} &
+%\makecell[l]{\circled{x.} Flow past a half body \\ \qquad \circled{1} + \circled{2} \\ \phantom{$\frac{Q}{2\pi}$}} & \makecell[l]{$U z + \dfrac{Q}{2 \pi} \log z$\\ ~ \\ \phantom{$\frac{Q}{2\pi}$}}  & \makecell[l]{... \\ ~ \\ ...} & \makecell[l]{... \\ ~ \\ ...} &
 %\begin{tikzpicture}[scale=1, baseline=0.75ex]
 %    % Draw the left half of the pill-shaped object with a curved cutoff
 %    \draw[fill=gray!90, draw=black]
