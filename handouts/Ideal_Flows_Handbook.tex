@@ -63,17 +63,18 @@
 \begin{tabular}{l @{\qquad} l @{\qquad} l @{\qquad} l @{\qquad} l}
 \toprule
 \toprule
-\makecell{\textbf{Elementary flow}\\ ~} & \makecell{\textbf{Complex potential} \\ $F = \phi + i \psi$} & \makecell{\textbf{Potential} \\ $\phi(x, y)$} & \makecell{\textbf{Streamfunction} \\ $\psi(x, y)$} & \makecell{\textbf{Sketch of streamlines}\\ ~} \\
+\textbf{Elementary flow} & \textbf{Complex potential}, $F = \phi + i \psi$ & \textbf{Potential}, $\phi(x, y)$ & \textbf{Streamfunction}, $\psi(x, y)$ & \textbf{Sketch of streamlines} \\
 \midrule
 \midrule
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \makecell[l]{\circled{1.} Uniform flow in the direction $\alpha$\\ ~ \\ \phantom{$U$}} & \makecell[l]{$Az$ with $A=Ue^{-i \alpha}$\\ where $U$ is real but $A$ is complex\\ ~ \\ \phantom{$U$}} & \makecell[l]{$U(x \cos \alpha+ y \sin \alpha)$ \\ ~ \\ {or $U r \cos (\theta-\alpha)$}\\ ~ } & \makecell[l]{$U(y \cos \alpha- x \sin \alpha)$ \\ ~ \\  {or $U r \sin (\theta-\alpha)$}\\ ~ } &
-\begin{tikzpicture}[scale=1, baseline=-0.75ex]
+\begin{tikzpicture}[scale=1, baseline=2.5ex]
+    % Axes
+    \draw[->, line width=1pt, gray] (-1.75,0) -- (2,0) node[right] {$x$};
+    \draw[->, line width=1pt, gray] (0,-1) -- (0,2) node[above] {$iy$};
+
     % Define angle alpha in degrees
     \def\angle{20}
-
-    % Draw horizontal reference line
-    \draw[gray, dashed, line width=1pt] (-2,0) -- (2,0);
 
     % Draw four parallel arrows at angle alpha
     \foreach \y in {-0.4, 0.4, 1.2} {
@@ -81,7 +82,7 @@
     }
 
     % Single U label to the right
-    \node at (1.75,{tan(\angle)*1.5}) {$U$};
+    \node at (1.75,{tan(\angle)*2.5}) {$U$};
 
     % Draw angle arc for denoting alpha
     \draw[-, line width=1pt] (0.35,0) arc[start angle=0, end angle=1.5*\angle, radius=1];
@@ -89,47 +90,58 @@
 \end{tikzpicture}
  \\
 \midrule
-\makecell[l]{\circled{2.} Source ($Q>0$; for sink replace $Q$ by $-Q$) \\ \phantom{\circled{2.}~} located at $z_{0}=x_0+iy_0$\\ \phantom{$\frac{Q}{2\pi}$}} & \makecell[l]{$\dfrac{Q}{2 \pi} \log (z-z_0)$\\ ~ \\ \phantom{$\frac{Q}{2\pi}$}} & \makecell[l]{$\dfrac{Q}{4 \pi} \ln \left[(x-x_0)^2+(y-y_0)^2\right]$\\ ~ \\ \textcolor{gray}{or, for $z_0=0$, $\dfrac{Q}{2 \pi} \ln r$}} & \makecell[l]{$\dfrac{Q}{2 \pi} \tan^{-1}\left(\dfrac{y-y_0}{x-x_0}\right)$ \\ ~ \\  \textcolor{gray}{or, for $z_0=0$, $\dfrac{Q}{2 \pi} \theta$}} &
-\begin{tikzpicture}[scale=1, baseline=-0.75ex]
+\makecell[l]{\circled{2.} Source ($Q>0$; for sink replace $Q$ by $-Q$) \\ \phantom{\circled{2.}} located at $z_{0}=x_0+iy_0$\\ \phantom{$\frac{Q}{2\pi}$}} & \makecell[l]{$\dfrac{Q}{2 \pi} \log (z-z_0)$\\ ~ \\ \phantom{$\frac{Q}{2\pi}$}} & \makecell[l]{$\dfrac{Q}{4 \pi} \ln \left[(x-x_0)^2+(y-y_0)^2\right]$\\ ~ \\ \textcolor{gray}{or, for $z_0=0$, $\dfrac{Q}{2 \pi} \ln r$}} & \makecell[l]{$\dfrac{Q}{2 \pi} \tan^{-1}\left(\dfrac{y-y_0}{x-x_0}\right)$ \\ ~ \\  \textcolor{gray}{or, for $z_0=0$, $\dfrac{Q}{2 \pi} \theta$}} &
+\begin{tikzpicture}[scale=1, baseline=2.75ex]
     % Axes
-    \draw[->, line width=1pt] (-1.3,0) -- (1.3,0) node[right] {$x$};
-    \draw[->, line width=1pt] (0,-1.3) -- (0,1.3) node[above] {$iy$};
+    \draw[->, line width=1pt, gray] (-0.5,0) -- (1.5,0) node[right] {$x$};
+    \draw[->, line width=1pt, gray] (0,-0.5) -- (0,1.5) node[above] {$iy$};
 
-    % Eight arrows with extra thickness
+    % Eight rays to represent the source
+    \def\ss{0.8}
     \foreach \angle in {0,45,...,315} {
-    	\draw[->] (0,0) -- ({cos(\angle)}, {sin(\angle)});
+    	\draw[->] (\ss,\ss) -- ({\ss+cos(\angle)}, {\ss+sin(\angle)});
     }
-\end{tikzpicture} \textcolor{gray}{($z_0=0$)}
+    \filldraw[black] (\ss,\ss) circle (2pt);
+\end{tikzpicture}
  \\
 \midrule
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makecell[l]{\circled{3.} Vortex located at $z_{0}=x_0+iy_0$\\ ~ \\ \phantom{$\dfrac{\Gamma}{2\pi}$}} & \makecell[l]{$\dfrac{-i \Gamma}{2 \pi} \log (z-z_0)$\\ ~ \\ \phantom{$\dfrac{\Gamma}{2\pi}$}} & \makecell[l]{$\dfrac{\Gamma}{2 \pi} \tan ^{-1}\left(\dfrac{y-y_0}{x-x_0}\right)$\\ ~ \\ \textcolor{gray}{or, for $z_0=0$, $\dfrac{\Gamma}{2 \pi} \theta$}} & \makecell[l]{$-\dfrac{\Gamma}{4 \pi} \ln \left[(x-x_0)^2+(y-y_0)^2\right]$\\ ~ \\ \textcolor{gray}{or, for $z_0=0$, $-\dfrac{\Gamma}{2 \pi} \ln r$}} &
+\makecell[l]{\circled{3.} Vortex (counterclockwise for $\Gamma >0$)\\ \phantom{\circled{3.}} located at $z_{0}=x_0+iy_0$ \\ \phantom{$\dfrac{\Gamma}{2\pi}$}} & \makecell[l]{$\dfrac{-i \Gamma}{2 \pi} \log (z-z_0)$\\ ~ \\ \phantom{$\dfrac{\Gamma}{2\pi}$}} & \makecell[l]{$\dfrac{\Gamma}{2 \pi} \tan ^{-1}\left(\dfrac{y-y_0}{x-x_0}\right)$\\ ~ \\ \textcolor{gray}{or, for $z_0=0$, $\dfrac{\Gamma}{2 \pi} \theta$}} & \makecell[l]{$-\dfrac{\Gamma}{4 \pi} \ln \left[(x-x_0)^2+(y-y_0)^2\right]$\\ ~ \\ \textcolor{gray}{or, for $z_0=0$, $-\dfrac{\Gamma}{2 \pi} \ln r$}} &
+\begin{tikzpicture}[scale=1, baseline=0.75ex]
+    % Axes
+    \def\ss{0.8}
+    \draw[->, line width=1pt, gray] (-1.3,-\ss) -- (1.3,-\ss) node[right] {$x$};
+    \draw[->, line width=1pt, gray] (-\ss,-1.3) -- (-\ss,1.3) node[above] {$iy$};
+
+    % Draw 3 concentric circles with breaks
+    \draw[line width=1.5pt] (0,0) ++(0.3,0) arc[start angle=0, end angle=180, radius=0.3];
+    \draw[->] (0,0) ++(180:0.3) arc[start angle=180, end angle=269, radius=0.3];
+	  \draw[line width=1.5pt] (0,0) ++(274:0.3) arc[start angle=274, end angle=360, radius=0.3];
+    %
+    \draw[line width=1.5pt] (0,0) ++(0.6,0) arc[start angle=0, end angle=180, radius=0.6];
+    \draw[->] (0,0) ++(180:0.6) arc[start angle=180, end angle=269, radius=0.6];
+	  \draw[line width=1.5pt] (0,0) ++(274:0.6) arc[start angle=274, end angle=360, radius=0.6];
+    %
+    \draw[line width=1.5pt] (0,0) ++(0.9,0) arc[start angle=0, end angle=180, radius=0.9];
+    \draw[->] (0,0) ++(180:0.9) arc[start angle=180, end angle=269, radius=0.9];
+	  \draw[line width=1.5pt] (0,0) ++(272:0.9) arc[start angle=272, end angle=360, radius=0.9];
+\end{tikzpicture}
+ \\
+\midrule
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makecell[l]{\circled{4.} Doublet located at $z_{0}=x_0+iy_0$\\ \phantom{\circled{4.}} and rotated by angle $\alpha$\\ ~ \\ \phantom{$\dfrac{m}{\pi}$}} & \makecell[l]{$\dfrac{m e^{i \alpha}}{z-z_0}$\\ ~ \\ \phantom{$\dfrac{m}{\pi}$}} & \makecell[l]{$\dfrac{m \cos\left(\alpha - \tan^{-1}\left(\frac{y-y_0}{x-x_0}\right)\right)}{\sqrt{(x-x_0)^2+(y-y_0)^2}}$\\ ~ \\ \textcolor{gray}{or, for $z_0=0$, $\dfrac{m \cos (\alpha-\theta)}{r}$}} & \makecell[l]{$\dfrac{m \sin\left(\alpha - \tan^{-1}\left(\frac{y-y_0}{x-x_0}\right)\right)}{\sqrt{(x-x_0)^2+(y-y_0)^2}}$\\ ~ \\ \textcolor{gray}{or, for $z_0=0$, $\dfrac{m \sin (\alpha-\theta)}{r}$}} &
 \begin{tikzpicture}[scale=1, baseline=-0.75ex]
     % Axes
-    \draw[->, line width=1pt] (-1.3,0) -- (1.3,0) node[right] {$x$};
-    \draw[->, line width=1pt] (0,-1.3) -- (0,1.3) node[above] {$iy$};
+    \def\ss{0.825}
+    \draw[->, line width=1pt, gray] ({-1.3-0.15},-\ss) -- (1.3,-\ss) node[right] {$x$};
+    \draw[->, line width=1pt, gray] ({-\ss-0.15},-1.3) -- ({-\ss-0.15},1.3) node[above] {$iy$};
 
-    % Inner circle with break
-    \draw[line width=1.5pt] (0,0) ++(0.5,0) arc[start angle=0, end angle=180, radius=0.5];
-    \draw[->] (0,0) ++(180:0.5) arc[start angle=180, end angle=269, radius=0.5];
-	\draw[line width=1.5pt] (0,0) ++(274:0.5) arc[start angle=274, end angle=360, radius=0.5];
-
-    % Outer circle with break
-    \draw[line width=1.5pt] (0,0) ++(1,0) arc[start angle=0, end angle=180, radius=1];
-    \draw[->] (0,0) ++(180:1) arc[start angle=180, end angle=269, radius=1];
-	\draw[line width=1.5pt] (0,0) ++(272:1) arc[start angle=272, end angle=360, radius=1];
-\end{tikzpicture} \textcolor{gray}{($z_0=0$)}
- \\
-\midrule
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makecell[l]{\circled{4.} Doublet located at $z_{0}=x_0+iy_0$\\ \phantom{\circled{4.}~} and rotated by angle $\alpha$\\ ~ \\ \phantom{$\dfrac{m}{\pi}$}} & \makecell[l]{$\dfrac{m e^{i \alpha}}{z-z_0}$\\ ~ \\ \phantom{$\dfrac{m}{\pi}$}} & \makecell[l]{$\dfrac{m \cos\left(\alpha - \tan^{-1}\left(\frac{y-y_0}{x-x_0}\right)\right)}{\sqrt{(x-x_0)^2+(y-y_0)^2}}$\\ ~ \\ \textcolor{gray}{or, for $z_0=0$, $\dfrac{m \cos (\alpha-\theta)}{r}$}} & \makecell[l]{$\dfrac{m \sin\left(\alpha - \tan^{-1}\left(\frac{y-y_0}{x-x_0}\right)\right)}{\sqrt{(x-x_0)^2+(y-y_0)^2}}$\\ ~ \\ \textcolor{gray}{or, for $z_0=0$, $\dfrac{m \sin (\alpha-\theta)}{r}$}} &
-\begin{tikzpicture}[scale=1, baseline=-0.75ex]
-    % Define angle
+    % Define angle alpha in degrees
     \def\angle{40}
 
     % Draw intersecting axes forming angle alpha
     \draw[thick, gray, dashed] (0,0) -- (1.75,0);
-    \draw[thick, gray, dashed] ({-1.75*cos(\angle)}, {-1.75*sin(\angle)}) -- ({1.75*cos(\angle)}, {1.75*sin(\angle)});
+    \draw[thick, gray, dashed] ({-1.75*cos(\angle)}, {-1.75*sin(\angle)}) -- ({1.9*cos(\angle)}, {1.9*sin(\angle)});
     % Draw angle arc and label angle
     \draw[-, line width=1pt] (1.25,0) arc[start angle=0, end angle=\angle, radius=1.25];
     \node at ({1.5*cos(\angle/2)}, {1.5*sin(\angle/2)}) {$\alpha$};
@@ -171,7 +183,7 @@
 \midrule
 \midrule
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makecell[l]{\circled{6.} Flow around a Rankine body\\ \phantom{\circled{6.}~} ($a$ is a real number/horizontal shift) \\[1mm] \qquad $\circled{1}\{\alpha=0\} + \circled{2}\{z_0=-a\} - \circled{2}\{z_0=a\}$ \\  \phantom{$\frac{Q}{2\pi}$}} & \makecell[l]{$U z + \dfrac{Q}{2 \pi} \log\left(\dfrac{z+a}{z-a}\right)$\\ ~ \\ \phantom{$\frac{Q}{2\pi}$}}  & \makecell[l]{$Ux + \dfrac{Q}{4 \pi} \ln\left[\dfrac{(x+a)^2+y^2}{(x-a)^2+y^2}\right]$\\ ~ \\ ...} & \makecell[l]{$Uy + \dfrac{Q}{2 \pi}\left[\tan^{-1}\left(\dfrac{y}{x+a}\right)-\tan^{-1}\left(\dfrac{y}{x-a}\right)\right]$\\ ~ \\ ...} &
+\makecell[l]{\circled{6.} Flow around a Rankine body\\ \phantom{\circled{6.}} ($a$ is a real number/horizontal shift) \\[1mm] \qquad $\circled{1}\{\alpha=0\} + \circled{2}\{z_0=-a\} - \circled{2}\{z_0=a\}$ \\  \phantom{$\frac{Q}{2\pi}$}} & \makecell[l]{$U z + \dfrac{Q}{2 \pi} \log\left(\dfrac{z+a}{z-a}\right)$\\ ~ \\ \phantom{$\frac{Q}{2\pi}$}}  & \makecell[l]{$Ux + \dfrac{Q}{4 \pi} \ln\left[\dfrac{(x+a)^2+y^2}{(x-a)^2+y^2}\right]$\\ ~ \\ ...} & \makecell[l]{$Uy + \dfrac{Q}{2 \pi}\left[\tan^{-1}\left(\dfrac{y}{x+a}\right)-\tan^{-1}\left(\dfrac{y}{x-a}\right)\right]$\\ ~ \\ ...} &
 \begin{tikzpicture}[scale=1, baseline=-0.1ex]
     % Draw the object as a pill-shaped, rounded rectangle
     \fill[gray!90, draw=black, rounded corners=0.4cm] (-0.8,-0.4) rectangle (0.8,0.4);
@@ -247,7 +259,7 @@
 %	% Draw horizontal reference lines and origin
 %    \draw[gray, dashed, line width=1pt] (-0.75,0) -- (2.75,0);
 %    \draw[gray, dashed, line width=1pt] (-0.75,1.5) -- (2.75,1.5);
-%	\filldraw[black] (0,0) circle (2pt);
+%	   \filldraw[black] (0,0) circle (2pt);
 %    % Upper horizontal reference line
 %    \draw[->] (-0.5,1.5) -- (2.0,1.5);
 %    % Label
