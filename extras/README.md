@@ -1,6 +1,6 @@
 # Extras
 
-This folder contains fun notebooks illustrating fluid mechanics topics that are usually not always covered in ME 50900. They are for your enrichment. :gift:
+This folder contains fun notebooks illustrating fluid mechanics topics that are not always covered in ME 50900. They are for your enrichment. :gift:
 
 Feel free to explore:
 * [Flow Visualization](Flow_Visualization.ipynb) &mdash; quiver plots, streamlines, pathlines, streaklines
