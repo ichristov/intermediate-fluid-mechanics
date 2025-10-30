@@ -69,7 +69,7 @@
 \begin{tabular}{l @{\qquad} l @{\qquad} l @{\qquad} l @{\qquad} c}
 \toprule
 \toprule
-\textbf{Elementary flow} & \textbf{Complex potential}, $F = \phi + i \psi$ & \textbf{Potential}, $\phi(x, y)$ & \textbf{Streamfunction}, $\psi(x, y)$ & \textbf{Sketch of streamlines} \\
+\textbf{Elementary flow} & \textbf{Complex potential}, $F = \phi + i \psi$ & \textbf{Potential}, $\phi(x, y)$ or $\phi(r, \theta)$ & \textbf{Streamfunction}, $\psi(x, y)$ or $\psi(r, \theta)$ & \textbf{Sketch of streamlines} \\
 \midrule
 \midrule
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -176,7 +176,7 @@
     \draw[line width=1.5pt] (0,0) -- ({4*cos(\angle)}, {4*sin(\angle)}); % angled leg
     \draw[->, line width=2.5pt] ({1.5*cos(\angle)}, {1.5*sin(\angle)}) -- ({1.3*cos(\angle)}, {1.3*sin(\angle)});
 
-    % Stretched arcs using B�zier curves
+    % Stretched arcs using Bezier curves
     \draw[->] ({4*cos(\angle)}, {4*sin(\angle)-0.35})
       .. controls (2.75,2.4) and (0.1,0.3) .. (3.75,0.2); % outer
     \draw[->] ({4.75*cos(\angle)}, {4.75*sin(\angle)-1})
@@ -190,7 +190,7 @@
 \midrule
 \midrule
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makecell[l]{\circled{6.} Flow past a Rankine body\\ \phantom{\circled{6.}} ($a$ is a real number/horizontal shift) \\[1mm] \qquad $\circled{1}\{\alpha=0\} + \circled{2}\{z_0=-a\} - \circled{2}\{z_0=a\}$} & \makecell[l]{$U z + \dfrac{Q}{2 \pi} \log\left(\dfrac{z+a}{z-a}\right)$\\[1mm] ~ }  & \makecell[l]{$Ux + \dfrac{Q}{4 \pi} \ln\left[\dfrac{(x+a)^2+y^2}{(x-a)^2+y^2}\right]$\\[1mm] ~ } & \makecell[l]{$Uy + \dfrac{Q}{2 \pi}\left[\tan^{-1}\left(\dfrac{y}{x+a}\right)-\tan^{-1}\left(\dfrac{y}{x-a}\right)\right]$\\[1mm] ~ } &
+\makecell[l]{\circled{6.} Flow past a Rankine body\\ \phantom{\circled{6.}} ($a$ is a real number/horizontal shift) \\[1mm] \qquad $\circled{1}\{\alpha=0\} + \circled{2}\{z_0=-a\} - \circled{2}\{z_0=a\}$} & \makecell[l]{$U z + \dfrac{Q}{2 \pi} \log\left(\dfrac{z+a}{z-a}\right)$\\[1mm] ~ }  & \makecell[l]{$Ux + \dfrac{Q}{4 \pi} \ln\left[\dfrac{(x+a)^2+y^2}{(x-a)^2+y^2}\right]$\\[1mm] ... } & \makecell[l]{$Uy + \dfrac{Q}{2 \pi}\left[\tan^{-1}\left(\dfrac{y}{x+a}\right)-\tan^{-1}\left(\dfrac{y}{x-a}\right)\right]$\\[1mm] ... } &
 \begin{tikzpicture}[scale=1, baseline=-1.5ex]
     % Draw the object as a pill-shaped, rounded rectangle
     \fill[gray!90, draw=black, rounded corners=0.4cm] (-0.8,-0.4) rectangle (0.8,0.4);
