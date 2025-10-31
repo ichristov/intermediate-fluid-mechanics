@@ -96,7 +96,7 @@
 \end{tikzpicture}
  \\
 \midrule
-\makecell[l]{\circled{2.} Source ($Q>0$; for sink replace $Q$ by $-Q$) \\ \phantom{\circled{2.}} located at $z_{0}=x_0+iy_0$\\ \phantom{$\frac{Q}{2\pi}$}} & \makecell[l]{$\dfrac{Q}{2 \pi} \log (z-z_0)$\\ ~ \\ \phantom{$\frac{Q}{2\pi}$}} & \makecell[l]{$\dfrac{Q}{4 \pi} \ln \left[(x-x_0)^2+(y-y_0)^2\right]$\\ ~ \\ \textcolor{gray}{or, for $z_0=0$, $\dfrac{Q}{2 \pi} \ln r$}} & \makecell[l]{$\dfrac{Q}{2 \pi} \tan^{-1}\left(\dfrac{y-y_0}{x-x_0}\right)$ \\ ~ \\  \textcolor{gray}{or, for $z_0=0$, $\dfrac{Q}{2 \pi} \theta$}} &
+\makecell[l]{\circled{2.} Source ($Q>0$; for sink replace $Q$ by $-Q$) \\ \phantom{\circled{2.}} located at $z_{0}=x_0+iy_0$\\ \phantom{$\frac{Q}{2\pi}$}} & \makecell[l]{$\dfrac{Q}{2 \pi} \log (z-z_0)$\\ ~ \\ \phantom{$\frac{Q}{2\pi}$}} & \makecell[l]{$\dfrac{Q}{2 \pi} \ln \sqrt{(x-x_0)^2+(y-y_0)^2}$\\ ~ \\ \textcolor{gray}{or, for $z_0=0$, $\dfrac{Q}{2 \pi} \ln r$}} & \makecell[l]{$\dfrac{Q}{2 \pi} \tan^{-1}\left(\dfrac{y-y_0}{x-x_0}\right)$ \\ ~ \\  \textcolor{gray}{or, for $z_0=0$, $\dfrac{Q}{2 \pi} \theta$}} &
 \begin{tikzpicture}[scale=1, baseline=2.75ex]
     % Axes
     \def\ss{0.8}
@@ -112,7 +112,7 @@
  \\
 \midrule
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makecell[l]{\circled{3.} Vortex (counterclockwise for $\Gamma >0$)\\ \phantom{\circled{3.}} located at $z_{0}=x_0+iy_0$ \\ \phantom{$\dfrac{\Gamma}{2\pi}$}} & \makecell[l]{$\dfrac{-i \Gamma}{2 \pi} \log (z-z_0)$\\ ~ \\ \phantom{$\dfrac{\Gamma}{2\pi}$}} & \makecell[l]{$\dfrac{\Gamma}{2 \pi} \tan ^{-1}\left(\dfrac{y-y_0}{x-x_0}\right)$\\ ~ \\ \textcolor{gray}{or, for $z_0=0$, $\dfrac{\Gamma}{2 \pi} \theta$}} & \makecell[l]{$-\dfrac{\Gamma}{4 \pi} \ln \left[(x-x_0)^2+(y-y_0)^2\right]$\\ ~ \\ \textcolor{gray}{or, for $z_0=0$, $-\dfrac{\Gamma}{2 \pi} \ln r$}} &
+\makecell[l]{\circled{3.} Vortex (counterclockwise for $\Gamma >0$)\\ \phantom{\circled{3.}} located at $z_{0}=x_0+iy_0$ \\ \phantom{$\dfrac{\Gamma}{2\pi}$}} & \makecell[l]{$\dfrac{-i \Gamma}{2 \pi} \log (z-z_0)$\\ ~ \\ \phantom{$\dfrac{\Gamma}{2\pi}$}} & \makecell[l]{$\dfrac{\Gamma}{2 \pi} \tan ^{-1}\left(\dfrac{y-y_0}{x-x_0}\right)$\\ ~ \\ \textcolor{gray}{or, for $z_0=0$, $\dfrac{\Gamma}{2 \pi} \theta$}} & \makecell[l]{$-\dfrac{\Gamma}{2 \pi} \ln \sqrt{(x-x_0)^2+(y-y_0)^2}$\\ ~ \\ \textcolor{gray}{or, for $z_0=0$, $-\dfrac{\Gamma}{2 \pi} \ln r$}} &
 \begin{tikzpicture}[scale=1, baseline=0.75ex]
     % Axes
     \def\ss{0.8}
@@ -190,7 +190,7 @@
 \midrule
 \midrule
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makecell[l]{\circled{6.} Flow past a Rankine body\\ \phantom{\circled{6.}} ($a$ is a real number/horizontal shift) \\[1mm] \qquad $\circled{1}\{\alpha=0\} + \circled{2}\{z_0=-a\} - \circled{2}\{z_0=a\}$} & \makecell[l]{$U z + \dfrac{Q}{2 \pi} \log\left(\dfrac{z+a}{z-a}\right)$\\[1mm] ~ }  & \makecell[l]{$Ux + \dfrac{Q}{4 \pi} \ln\left[\dfrac{(x+a)^2+y^2}{(x-a)^2+y^2}\right]$\\[1mm] ... } & \makecell[l]{$Uy + \dfrac{Q}{2 \pi}\left[\tan^{-1}\left(\dfrac{y}{x+a}\right)-\tan^{-1}\left(\dfrac{y}{x-a}\right)\right]$\\[1mm] ... } &
+\makecell[l]{\circled{6.} Flow past a Rankine body\\ \phantom{\circled{6.}} ($a$ is a real number/horizontal shift) \\ \qquad $\circled{1}\{\alpha=0\} + \circled{2}\{z_0=-a\} - \circled{2}\{z_0=a\}$ \\ ~ } & \makecell[l]{$U z + \dfrac{Q}{2 \pi} \log\left(\dfrac{z+a}{z-a}\right)$\\ ~ \\ ~ }  & \makecell[l]{$Ux + \dfrac{Q}{2 \pi} \ln\sqrt{\dfrac{(x+a)^2+y^2}{(x-a)^2+y^2}}$\\ ~ \\ \textcolor{gray}{[inconventient to use polar coords]} } & \makecell[l]{$Uy + \dfrac{Q}{2 \pi}\left[\tan^{-1}\left(\dfrac{y}{x+a}\right)-\tan^{-1}\left(\dfrac{y}{x-a}\right)\right]$\\ ~ \\ \textcolor{gray}{[inconventient to use polar coords]} } &
 \begin{tikzpicture}[scale=1, baseline=-1.5ex]
     % Draw the object as a pill-shaped, rounded rectangle
     \fill[gray!90, draw=black, rounded corners=0.4cm] (-0.8,-0.4) rectangle (0.8,0.4);
@@ -212,8 +212,8 @@
   \\
 \midrule
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makecell[l]{\circled{7.} Flow past a cylinder with circulation\\[1mm] \qquad $\circled{1}\{\alpha=0\} + \circled{4}\{\alpha=0,m=UR^2,z_0=0\}- \circled{3}\{z_0=0\}$ \\ \phantom{$\frac{\Gamma}{2\pi}$} } & \makecell[l]{$U\left(z+\dfrac{R^2}{z}\right) + \dfrac{i\Gamma}{2 \pi} \log z$ \\ ~ \\ ~} & \makecell[l]{... \\ ~ \\ $U\left(1+\dfrac{R^2}{r^2}\right) r\cos\theta - \dfrac{\Gamma}{2 \pi} \theta$} & \makecell[l]{... \\ ~ \\ $U\left(1-\dfrac{R^2}{r^2}\right) r \sin\theta + \dfrac{\Gamma}{2 \pi} \ln r$} &
-\begin{tikzpicture}[scale=1, baseline=-0.1ex]
+\makecell[l]{\circled{7.} Flow past a cylinder with circulation\\ \qquad $\circled{1}\{\alpha=0\} + \circled{4}\{\alpha=0,m=UR^2,z_0=0\}- \circled{3}\{z_0=0\}$ \\ \phantom{$\frac{\Gamma}{2\pi}$} \\ ~ } & \makecell[l]{$U\left(z+\dfrac{R^2}{z}\right) + \dfrac{i\Gamma}{2 \pi} \log z$ \\ ~ \\ ~} & \makecell[l]{$U\left(1+\dfrac{R^2}{x^2+y^2}\right) x - \dfrac{\Gamma}{2 \pi} \tan^{-1}\left(\frac{y}{x}\right)$ \\ ~ \\ $U\left(1+\dfrac{R^2}{r^2}\right) r\cos\theta - \dfrac{\Gamma}{2 \pi} \theta$} & \makecell[l]{$U\left(1-\dfrac{R^2}{x^2+y^2}\right) y + \dfrac{\Gamma}{2 \pi} \ln \sqrt{x^2+y^2}$ \\ ~ \\ $U\left(1-\dfrac{R^2}{r^2}\right) r \sin\theta + \dfrac{\Gamma}{2 \pi} \ln r$} &
+\begin{tikzpicture}[scale=1, baseline=-1.0ex]
     % Draw the circular object with a black border
     \filldraw[fill=gray!90, draw=black] (0,0) circle (0.4);
 
