@@ -24,6 +24,7 @@ The repository mainly consists of Jupyter notebooks used for hands-on demos in l
     - [Boundary Layers](Boundary_Layers.ipynb) &mdash; everything you need to know about Blasius' problem
     - [Stokes Flows 2D](Stokes_Flows_2D.ipynb) &mdash; having fun with the biharmonic equation in the plane, from Taylor's scraper to Moffatt's eddies
     - [Stokes Flow Past Sphere](Stokes_Flow_Past_Sphere.ipynb) &mdash; heavy-duty calculations in spherical coordinates
+    - [Wavy Channel](Wavy_Channel.ipynb) &mdash; the pressure drop along a wavy channel from lubrication theory
     - [Slipper Pad Bearing](Slipper_Pad_Bearing.ipynb) &mdash; a classic application of Reynolds' lubrication equation
 * Dimensional analysis:
     - [Dimensional Analysis](Dimensional_Analysis.ipynb) &mdash; Buckingham's $\Pi$ theorem is just the rank&ndash;nullity theorem in disguise
