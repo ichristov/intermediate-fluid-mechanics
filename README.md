@@ -34,7 +34,7 @@ The repository mainly consists of Jupyter notebooks used for hands-on demos in l
 
 :memo: Also, checkout the [handouts](handouts) folder.
 
-:books: Some resources for self-learning Jupyter, Python and LaTeX:
+:books: Some resources for self-learning Jupyter, Python and $\LaTeX$:
 * Google Colaboratory lets open Jupyter notebooks from GitHub and run them in the cloud from your browser: https://colab.research.google.com.
     - See the [getting started with Markdown](https://www.markdownguide.org/getting-started/) guide for how to write nice discussion between your computational cells in the Jupyter notebook.
     - More advanced programmers may find the following links useful: [Introduction to Git in VS Code](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git), [Jupyter Notebooks in VS Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks).
