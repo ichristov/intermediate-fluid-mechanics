@@ -8,17 +8,14 @@ repos:
       - id: end-of-file-fixer
       - id: check-yaml
       - id: check-added-large-files
-        args: ["--maxkb=1000"] # allows files up to 1MB (1000KB)
+        args: ["--maxkb=1000"]
       - id: check-merge-conflict
 
-  # Jupyter notebook stripping (widgets only)
-  - repo: https://github.com/kynan/nbstripout
-    rev: 0.8.1
+  # Custom notebook widget stripper
+  - repo: local
     hooks:
-      - id: nbstripout
-        args: [
-          '--keep-output',
-          '--keep-count',
-          '--extra-keys=metadata.widgets cell.metadata.widgets cell.outputs.data.application/vnd.jupyter.widget-view+json cell.outputs.data.application/vnd.jupyter.widget-state+json cell.outputs.data.text/html cell.outputs.data.application/javascript'
-        ]
+      - id: strip-notebook-widgets
+        name: Strip notebook widgets and animations
+        entry: python strip_widgets.py
+        language: system
         files: \.ipynb$
