@@ -17,5 +17,6 @@ repos:
       - id: strip-notebook-widgets
         name: Strip notebook widgets and animations
         entry: python strip_widgets.py
-        language: system
+        language: python
+        additional_dependencies: []
         files: \.ipynb$
