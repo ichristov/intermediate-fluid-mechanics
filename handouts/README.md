@@ -3,7 +3,7 @@
 This folder contains several handouts given in ME 50900 lectures.
 
 For example:
-* [Writing Tips Best Practices](Writing_Tips_Best_Practices.pdf) &mdash; technical writing tips, including for using LaTeX, and best practices for preparing assignment solutions
-* [Tensor Algebra](Tensor_Algebra.pdf) &mdash; a handy summary and tips regarding the key algebraic operations (transpose and various multiplications) we perform with vectors and tensors in index notation.
-* [iNS Summary Sheet](iNS_Summary_Sheet.pdf) &mdash; a handy summary of the governing equations (conservation of mass and conservation/balance of linear momentum for a continuum in the Eulerian frame) and the Newtonian fluid's stress tensor (for compressible and incompressible flow).
-* [Ideal Flows Handbook](Ideal_Flows_Handbook.pdf) &mdash; a handy summary of the building block ideals flows in the plane (2D), from which we generate many others by superposition.
+* [Writing Tips Best Practices](writing_tips_best_practices.md) &mdash; technical writing tips, including for using LaTeX, and best practices for preparing assignment solutions
+* [Tensor Algebra](tensor_algebra.md) &mdash; a handy summary and tips regarding the key algebraic operations (transpose and various multiplications) we perform with vectors and tensors in index notation.
+* [iNS Summary Sheet](iNS_summary_sheet.pdf) &mdash; a handy summary of the governing equations (conservation of mass and conservation/balance of linear momentum for a continuum in the Eulerian frame) and the Newtonian fluid's stress tensor (for compressible and incompressible flow).
+* [Ideal Flows Handbook](ideal_flows_handbook.pdf) &mdash; a handy summary of the building block ideals flows in the plane (2D), from which we generate many others by superposition.
