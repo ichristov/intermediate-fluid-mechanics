@@ -6,7 +6,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 -->
 
-# Writing Tips and Best Practices for Assignments
+# Writing tips and best practices for assignments
 
 Prof. Ivan C. Christov, Purdue University, ME 50900
 

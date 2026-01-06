@@ -1,4 +1,4 @@
-# (Some) Vector & Tensor Algebra Operations
+# Vector and tensor algebra summary
 
 Prof. Ivan C. Christov, Purdue University, ME 50900
 
