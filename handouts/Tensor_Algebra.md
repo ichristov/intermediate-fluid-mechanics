@@ -8,7 +8,8 @@ $$
     \text{If}\quad \underline{\underline{T}} = T_{ij}
     \quad\text{then}\quad
     T_{ji} = \underline{\underline{T}}^t
-    \quad \left[\text{understood as } (\underline{\underline{T}}^t)_{ij \text{ entry}} \right]
+    \\; \\;
+    \left[\text{understood as } (\underline{\underline{T}}^t)_{ij \text{ entry}} \right]
 $$
 
 **Remember:** flipping the indices creates a *new* tensor ("the
