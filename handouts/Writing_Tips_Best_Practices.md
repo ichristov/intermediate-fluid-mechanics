@@ -103,10 +103,10 @@ technical writing.
         LaTeX](https://ctan.org/pkg/short-math-guide).
 
     *   Don't italicize units. Units are "text," they are not "math."
-        That is, write " $101.3$ $\text{kPa}$ " instead of
+        That is, write " $101.3$ $\mathrm{kPa}$ " instead of
         " $101.3$ $kPa$ ". Furthermore, ensure there is a space between
-        numbers and units, that is, write " $101.3$ $\text{kPa}$ "
-        instead of " $101.3\text{kPa}$ ".
+        numbers and units, that is, write " $101.3$ $\mathrm{kPa}$ "
+        instead of " $101.3\mathrm{kPa}$ ".
 
         -   Consider using the LaTeX package
             [`siunitx`](https://ctan.org/pkg/siunitx), which allows you
@@ -198,8 +198,8 @@ technical writing.
     *   Make sure the legend doesn't cover the plot.
 
     *   Use scientific notation instead of coding notation. For example,
-        write " $F=1.6\times10^{7}$ $\text{N}$ " instead of
-        " $F = 1.6e7$ $\text{N}$ ". Note that $\times$ (coded `$\times$`) is a
+        write " $F=1.6\times10^{7}$ $\mathrm{N}$ " instead of
+        " $F = 1.6e7$ $\mathrm{N}$ ". Note that $\times$ (coded `$\times$`) is a
         [special symbol](https://en.wikipedia.org/wiki/Multiplication_sign);
         it is *not* the math variable $x$ (coded `$x$`) in a different font.
 
