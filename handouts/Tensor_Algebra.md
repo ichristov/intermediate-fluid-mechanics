@@ -38,11 +38,15 @@ $$
     \qquad\text{or}\qquad
     (\underline{v}\,\underline{\underline{T}})_{j \text{th entry}} = \sum_{{\color{magenta}i}=1}^3 T_{{\color{magenta}i}j}v_{\color{magenta}i}
 $$
+
 but we're allowed to (carefully!) re-index as
+
 $$
     (\underline{v}\,\underline{\underline{T}})_{i \text{th entry}} = \sum_{{\color{magenta}j}=1}^3 T_{{\color{magenta}j}i}v_{\color{magenta}j}
 $$
-which **does not commute** because
+
+which **does** **not** **commute** because
+
 $$
     \underline{\underline{T}}\,\underline{v} = v_j T_{ij}
     \qquad\text{or}\qquad
@@ -51,9 +55,9 @@ $$
 
 **Note:** If we always write $T_{ij}$, then you can remember what index
 to put on $v$ by whether $\underline{v}$ is in-front of
-$\underline{\underline{T}}$ (then it's $v_i$, and $\underline{v}$ is a <span style="color:red">row vector</span>) or behind $\underline{\underline{T}}$ (then
-it's $v_j$, and $\underline{v}$ is a <span style="color:red">column vector</span>) in
-the symbolic notation expression.
+$\underline{\underline{T}}$ (then it's $v_i$, and $\underline{v}$ is a _row vector_)
+or behind $\underline{\underline{T}}$ (then it's $v_j$, and $\underline{v}$ is a
+_column vector_) inthe symbolic notation expression.
 
 The following useful fact follows:
 $\underline{v}\,\underline{\underline{T}}$ is the row vector with the
@@ -75,9 +79,9 @@ But, if we let
 $\underline{\underline{T}} =  \underline{u}\,\underline{v}$, then we
 have shown that
 $\underline{v}\,\underline{u} = \underline{\underline{T}}^t$.\
-Sometimes we denote "$\underline{u}\,\underline{v}$" as
-"$\underline{u}\otimes\underline{v}$" (so we don't accidentaly confuse
-it for "$\underline{u}\cdot\underline{v}$").
+Sometimes we denote " $\underline{u}\,\underline{v}$ " as
+" $\underline{u}\otimes\underline{v}$ " (so we don't accidentaly confuse
+it for " $\underline{u}\cdot\underline{v}$ ").
 
 ### tensor/tensor (direct product; matrix $\times$ matrix = matrix) &mdash; *does not commute*
 
@@ -88,7 +92,7 @@ $$
 This is simply multiplication of matrices, where $k$ runs over the $i$-th
 row of $\underline{\underline{T}}$ *and* $j$-th column of
 $\underline{\underline{S}}$: $$R_{ij} = \sum_{k=1}^3 T_{ik} S_{kj}$$
-<span style="color:red">**"Row times column" $\Rightarrow$ inner indices** (2nd one on $T$ and 1st one on $S$, in index notation) **must match!**</span>
+**"Row times column" $\Rightarrow$ inner indices** (2nd one on $T$ and 1st one on $S$, in index notation) **must match!**
 
 ### tensor/tensor (double contraction; "dot product" for tensors) &mdash; *does not commute*
 
