@@ -8,7 +8,7 @@ $$
     \text{If}\quad \underline{\underline{T}} = T_{ij}
     \quad\text{then}\quad
     T_{ji} = \underline{\underline{T}}^t
-    \\; \\;
+    \ ~  \ ~
     \left[\text{understood as } (\underline{\underline{T}}^t)_{ij \text{ entry}} \right]
 $$
 
@@ -90,7 +90,7 @@ it for " $\underline{u}\cdot\underline{v}$ ").
 ### tensor/tensor (direct product; matrix $\times$ matrix = matrix) &mdash; *does not commute*
 
 $$
-    \underline{\underline{R}} = \underline{\underline{T}} ~ \underline{\underline{S}} \quad\text{or}\quad R_{ij} = T_{ik}S_{kj} \quad\Rightarrow\quad\;\text{(for example)}\quad T_{ik}S_{jk} = \underline{\underline{T}} ~ \underline{\underline{S}}^t \ne \underline{\underline{R}} \; !
+    \underline{\underline{R}} = \underline{\underline{T}} ~ \underline{\underline{S}} \quad\text{or}\quad R_{ij} = T_{ik}S_{kj} \quad\Rightarrow\quad ~ \text{(for example)}\quad T_{ik}S_{jk} = \underline{\underline{T}} ~ \underline{\underline{S}}^t \ne \underline{\underline{R}}  ~  !
 $$
 
 This is simply multiplication of matrices, where $k$ runs over the $i$-th
@@ -101,7 +101,7 @@ $\underline{\underline{S}}$: $$R_{ij} = \sum_{k=1}^3 T_{ik} S_{kj}$$
 ### tensor/tensor (double contraction; "dot product" for tensors) &mdash; *does not commute*
 
 $$
-    \underline{\underline{T}} : \underline{\underline{S}} = T_{ij} S_{ji} \quad\Rightarrow\quad\;\text{(for example)}\quad T_{ij} S_{ij} = \underline{\underline{T}} : \underline{\underline{S}}^t \ne \underline{\underline{T}} : \underline{\underline{S}}
+    \underline{\underline{T}} : \underline{\underline{S}} = T_{ij} S_{ji} \quad\Rightarrow\quad ~ \text{(for example)}\quad T_{ij} S_{ij} = \underline{\underline{T}} : \underline{\underline{S}}^t \ne \underline{\underline{T}} : \underline{\underline{S}}
 $$
 
 **Note:** If we define $R_{kl} = T_{kj} S_{jl}$ then
