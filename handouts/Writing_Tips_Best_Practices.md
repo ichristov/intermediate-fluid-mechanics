@@ -103,10 +103,10 @@ technical writing.
         LaTeX](https://ctan.org/pkg/short-math-guide).
 
     *   Don't italicize units. Units are "text," they are not "math."
-        That is, write " $101.3$ $\text{kPa}$" instead of
-        " $101.3$ $kPa$." Furthermore, ensure there is a space between
-        numbers and units, that is, write " $101.3$ $\text{kPa}$"
-        instead of " $101.3\text{kPa}$."
+        That is, write " $101.3$ $\text{kPa}$ " instead of
+        " $101.3$ $kPa$ ". Furthermore, ensure there is a space between
+        numbers and units, that is, write " $101.3$ $\text{kPa}$ "
+        instead of " $101.3\text{kPa}$ ".
 
         -   Consider using the LaTeX package
             [`siunitx`](https://ctan.org/pkg/siunitx), which allows you
