@@ -3,6 +3,7 @@
 .venv
 .vscode
 not-ready-for-github
+__pycache__
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
