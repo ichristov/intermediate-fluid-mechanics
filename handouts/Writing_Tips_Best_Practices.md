@@ -80,9 +80,9 @@ technical writing.
     conversions are correct.
 
 9.  Clearly identify when a variable is a scalar (such as $f(x)$, $5$,
-    or $b$), vector (such as $\underline{v}$, $\vec{v}$, or $\boldsymbol{v}$),
+    or $b$), vector (such as $\underline{v}$, $\vec{v}$, or 𝒗),
     or a tensor (such as $\underline{\underline{T}}$, $\vec{\vec{T}}$,
-    or $\boldsymbol{T}$). Just like with units, your use of scalars,
+    or 𝙏). Just like with units, your use of scalars,
     vectors, and tensors in algebraic equations should be consistent.
 
 10. If typing your assignment:
