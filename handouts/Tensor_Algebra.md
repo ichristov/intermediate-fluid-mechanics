@@ -35,23 +35,23 @@ vector!
 clarity; optional when using 1 vs. 2 underlines.)
 
 $$
-    \underline{v}\\\\,\underline{\underline{T}} = v_i T_{ij}
+    \underline{v}\\,\underline{\underline{T}} = v_i T_{ij}
     \qquad\text{or}\qquad
-    (\underline{v}\\\\,\underline{\underline{T}})_{j \text{th entry}} = \sum_{{\color{magenta}i}=1}^3 T_{{\color{magenta}i}j}v_{\color{magenta}i}
+    (\underline{v}\\,\underline{\underline{T}})_{j \text{th entry}} = \sum_{{\color{magenta}i}=1}^3 T_{{\color{magenta}i}j}v_{\color{magenta}i}
 $$
 
 but we're allowed to (carefully!) re-index as
 
 $$
-    (\underline{v}\\\\,\underline{\underline{T}})_{i \text{th entry}} = \sum_{{\color{magenta}j}=1}^3 T_{{\color{magenta}j}i}v_{\color{magenta}j}
+    (\underline{v}\\,\underline{\underline{T}})_{i \text{th entry}} = \sum_{{\color{magenta}j}=1}^3 T_{{\color{magenta}j}i}v_{\color{magenta}j}
 $$
 
 which **does** **not** **commute** because
 
 $$
-    \underline{\underline{T}}\\\\,\underline{v} = v_j T_{ij}
+    \underline{\underline{T}}\\,\underline{v} = v_j T_{ij}
     \qquad\text{or}\qquad
-    (\underline{\underline{T}}\\\\,\underline{v})_{i \text{th entry}} = \sum_{j=1}^3 T_{ij}v_j
+    (\underline{\underline{T}}\\,\underline{v})_{i \text{th entry}} = \sum_{j=1}^3 T_{ij}v_j
 $$
 
 **Note:** If we always write $T_{ij}$, then you can remember what index
@@ -61,33 +61,33 @@ or behind $\underline{\underline{T}}$ (then it's $v_j$, and $\underline{v}$ is a
 _column vector_) inthe symbolic notation expression.
 
 The following useful fact follows:
-$\underline{v}\\\\,\underline{\underline{T}}$ is the row vector with the
+$\underline{v}\\,\underline{\underline{T}}$ is the row vector with the
 same entries as the column vector
-$\underline{\underline{T}}^t\\\\,\underline{v}$.
+$\underline{\underline{T}}^t\\,\underline{v}$.
 
 ### vector/vector (dyadic product; column vector $\times$ row vector = matrix) &mdash; *does not commute*
 
 $$
-    \underline{u}\\\\,\underline{v} = u_i v_j
+    \underline{u}\\,\underline{v} = u_i v_j
 $$
 
 **does not commute** because
 $$
-    \underline{v}\\\\,\underline{u} = v_i u_j = u_j v_i
+    \underline{v}\\,\underline{u} = v_i u_j = u_j v_i
 $$
 
 But, if we let
-$\underline{\underline{T}} =  \underline{u}\\\\,\underline{v}$, then we
+$\underline{\underline{T}} =  \underline{u}\\,\underline{v}$, then we
 have shown that
-$\underline{v}\\\\,\underline{u} = \underline{\underline{T}}^t$.\
-Sometimes we denote " $\underline{u}\\\\,\underline{v}$ " as
+$\underline{v}\\,\underline{u} = \underline{\underline{T}}^t$.\
+Sometimes we denote " $\underline{u}\\,\underline{v}$ " as
 " $\underline{u}\otimes\underline{v}$ " (so we don't accidentaly confuse
 it for " $\underline{u}\cdot\underline{v}$ ").
 
 ### tensor/tensor (direct product; matrix $\times$ matrix = matrix) &mdash; *does not commute*
 
 $$
-    \underline{\underline{R}} = \underline{\underline{T}}\\\\,\underline{\underline{S}} \quad\text{or}\quad R_{ij} = T_{ik}S_{kj} \quad\Rightarrow\quad\;\text{(for example)}\quad T_{ik}S_{jk} = \underline{\underline{T}}\\\\,\underline{\underline{S}}^t \ne \underline{\underline{R}} \; !
+    \underline{\underline{R}} = \underline{\underline{T}}\\,\underline{\underline{S}} \quad\text{or}\quad R_{ij} = T_{ik}S_{kj} \quad\Rightarrow\quad\;\text{(for example)}\quad T_{ik}S_{jk} = \underline{\underline{T}}\\,\underline{\underline{S}}^t \ne \underline{\underline{R}} \; !
 $$
 
 This is simply multiplication of matrices, where $k$ runs over the $i$-th
@@ -104,7 +104,7 @@ $$
 **Note:** If we define $R_{kl} = T_{kj} S_{jl}$ then
 $\mathop{\mathrm{tr}}(\underline{\underline{R}}) = R_{kk} = R_{ii} = T_{ij} S_{ji}$,
 in other words
-$\underline{\underline{T}} :  \underline{\underline{S}} = \mathop{\mathrm{tr}}( \underline{\underline{T}}\\\\, \underline{\underline{S}})$.
+$\underline{\underline{T}} :  \underline{\underline{S}} = \mathop{\mathrm{tr}}( \underline{\underline{T}}\\, \underline{\underline{S}})$.
 
 &mdash;-
 
