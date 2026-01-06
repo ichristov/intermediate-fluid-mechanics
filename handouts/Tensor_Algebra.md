@@ -1,4 +1,4 @@
-# (Some) Vector & tensor algebra operations
+# (Some) Vector & Tensor Algebra Operations
 
 Prof. Ivan C. Christov, Purdue University, ME 50900
 
@@ -74,6 +74,7 @@ $$
 $$
 
 **does not commute** because
+
 $$
     \underline{v} ~ \underline{u} = v_i u_j = u_j v_i
 $$
