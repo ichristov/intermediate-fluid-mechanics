@@ -80,9 +80,9 @@ technical writing.
     conversions are correct.
 
 9.  Clearly identify when a variable is a scalar (such as $f(x)$, $5$,
-    or $b$), vector (such as $\underline{v}$, $\vec{v}$, or <b>$\boldsymbol{v}$</b>),
+    or $b$), vector (such as $\underline{v}$, $\vec{v}$, or $\boldsymbol{v}$),
     or a tensor (such as $\underline{\underline{T}}$, $\vec{\vec{T}}$,
-    or <b>$\boldsymbol{T}$</b>). Just like with units, your use of scalars,
+    or $\boldsymbol{T}$). Just like with units, your use of scalars,
     vectors, and tensors in algebraic equations should be consistent.
 
 10. If typing your assignment:
@@ -103,9 +103,9 @@ technical writing.
         LaTeX](https://ctan.org/pkg/short-math-guide).
 
     *   Don't italicize units. Units are "text," they are not "math."
-        That is, write "$101.3~\text{kPa}$" instead of
-        "$101.3~kPa$." Furthermore, ensure there is a space between
-        numbers and units, that is, write "$101.3~\text{kPa}$"
+        That is, write "$101.3$ $\text{kPa}$" instead of
+        "$101.3$ $kPa$." Furthermore, ensure there is a space between
+        numbers and units, that is, write "$101.3$ $\text{kPa}$"
         instead of "$101.3\text{kPa}$."
 
         -   Consider using the LaTeX package
@@ -198,8 +198,8 @@ technical writing.
     *   Make sure the legend doesn't cover the plot.
 
     *   Use scientific notation instead of coding notation. For example,
-        write "$F=1.6\times10^{7}~\mathrm{N}$" instead of
-        "$F = 1.6e7~\mathrm{N}$." Note that $\times$ (coded `$\times$`) is a
+        write "$F=1.6\times10^{7}$ N" instead of
+        "$F = 1.6e7$ N$." Note that $\times$ (coded `$\times$`) is a
         [special symbol](https://en.wikipedia.org/wiki/Multiplication_sign);
         it is *not* the math variable $x$ (coded `$x$`) in a different font.
 
