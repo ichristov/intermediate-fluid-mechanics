@@ -198,8 +198,8 @@ technical writing.
     *   Make sure the legend doesn't cover the plot.
 
     *   Use scientific notation instead of coding notation. For example,
-        write "$F=1.6\times10^{7}$ N" instead of
-        "$F = 1.6e7$ N$." Note that $\times$ (coded `$\times$`) is a
+        write " $F=1.6\times10^{7}$ $\text{N}$" instead of
+        " $F = 1.6e7$ $\text{N}$ ". Note that $\times$ (coded `$\times$`) is a
         [special symbol](https://en.wikipedia.org/wiki/Multiplication_sign);
         it is *not* the math variable $x$ (coded `$x$`) in a different font.
 
