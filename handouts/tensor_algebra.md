@@ -15,7 +15,7 @@ $$
 **Remember:** flipping the indices creates a *new* tensor ("the
 transpose").
 
-**Caution:** $T_{ij} = T_{ji}$ *only* for the _special case_ of **symmetric** tensors!
+**Caution:** $T_{ij} = T_{ji}$ *only* for the *special case* of **symmetric** tensors!
 
 **Note:** Panton denotes transpose with $^t$, but you might also see
 $^\top$.
@@ -24,7 +24,7 @@ $^\top$.
 
 ### vector/vector (dot product)
 
-(row vector $\times$ column vector = scalar) &mdash; _only one that commutes_:
+(row vector $\times$ column vector = scalar) &mdash; *only one that commutes*:
 
 $$
     \underline{u}\cdot\underline{v} = u_i v_i = v_i u_i = \underline{v}\cdot\underline{u}
@@ -36,7 +36,7 @@ vector!
 
 ### vector/tensor
 
-(row vector $\times$ matrix = row vector, or matrix $\times$ column vector = column vector) &mdash; _does not commute_:
+(row vector $\times$ matrix = row vector, or matrix $\times$ column vector = column vector) &mdash; *does not commute*:
 
 $$
     \underline{v} ~ \underline{\underline{T}} = v_i T_{ij}
@@ -69,13 +69,13 @@ clarity; optional when using 1 vs. 2 underlines.
 
 **Note:** If we always write $T_{ij}$, then you can remember what index
 to put on $v$ by whether $\underline{v}$ is in-front of
-$\underline{\underline{T}}$ (then it's $v_i$, and $\underline{v}$ is a _row vector_)
+$\underline{\underline{T}}$ (then it's $v_i$, and $\underline{v}$ is a *row vector*)
 or behind $\underline{\underline{T}}$ (then it's $v_j$, and $\underline{v}$ is a
-_column vector_) inthe symbolic notation expression.
+*column vector*) inthe symbolic notation expression.
 
 ### vector/vector (dyadic product)
 
-(column vector $\times$ row vector = matrix) &mdash; _does not commute_:
+(column vector $\times$ row vector = matrix) &mdash; *does not commute*:
 
 $$
     \underline{u} ~ \underline{v} = u_i v_j
@@ -118,7 +118,7 @@ $\underline{\underline{S}}$: $$R_{ij} = \sum_{k=1}^3 T_{ik} S_{kj}$$
 
 ### tensor/tensor (double contraction)
 
-"dot product" for tensors &mdash; _does not commute_:
+"dot product" for tensors &mdash; *does not commute*:
 
 $$
     \underline{\underline{T}} : \underline{\underline{S}} = T_{ij} S_{ji}
@@ -130,7 +130,6 @@ $$
     T_{ij} S_{ij} = T_{ij} (\underline{\underline{S}}^t)_{ji} = \underline{\underline{T}} : \underline{\underline{S}}^t
     \ne \underline{\underline{T}} : \underline{\underline{S}} ~ !
 $$
-
 
 **Note:** If we define $R_{kl} = T_{kj} S_{jl}$ then
 $\mathop{\mathrm{tr}}(\underline{\underline{R}}) = R_{kk} = R_{ii} = T_{ij} S_{ji}$,
