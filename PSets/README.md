@@ -1,3 +1,3 @@
 # PSets
 
-This folder contains materials related to the Problem Sets (PSets) in the course. Jupyter Notebooks are provided to illustrate select PSet solutions from past ME 50900 courses. Some notebooks are labeled by semester at the beginning of the filename, such as "Spring2025_...".
+This folder contains materials related to the Problem Sets (PSets) in the course, such as data or materials for completing PSets. Select Jupyter Notebooks are provided to illustrate PSet solutions.
