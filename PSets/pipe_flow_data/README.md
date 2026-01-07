@@ -5,6 +5,7 @@ This folder contains four CSV (comma-separated values/text) files of data digiti
 Each CSV file contains two columns. The first column is the efflux time $t_f$ [in seconds], which is the time it takes to fill up an 8.81 cm³ bucket with the given fluid coming out of a pipe. The second column is the pressure drop $\Delta p$ [in kilopascals] maintained across the pipe used to fill the bucket.
 
 The fluid properties are
+
 | fluid      | $\rho_0$ [kg/m³]              | $\mu_0$ [Pa s] |
 |------------| ----------------------------- | -------------- |
 | chloroform | 1489.0                        | 0.0005300      |
