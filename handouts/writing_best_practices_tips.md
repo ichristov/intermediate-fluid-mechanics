@@ -12,7 +12,7 @@ Prof. Ivan C. Christov, Purdue University, ME 50900
 
 ## Introduction
 
-In science and engineering, writing is a primary means of communicating ideas. Whether it's project reports, journal articles, proposals, manuals, or even emails and memos, clear writing helps others understand your work. As a graduate student, you'll likely find that more people read your writing than hear you present. That means even the most innovative ideas can be overlooked if they aren't explained clearly and professionally. Strong technical writing skills are essential for effectively sharing your research, making a positive impression, and advancing in both academia and industry.
+In science and engineering, writing is a primary means of communicating ideas. Whether it's project reports, journal articles, proposals, manuals, or even emails and memos, clear writing helps others understand your work. As a graduate student, you'll likely find that more people read your writing than hear you present. That means even the most innovative ideas can be overlooked if they aren't clearly and professionally explained. Strong technical writing skills are essential for effectively sharing your research, making a positive impression, and advancing in both academia and industry.
 
 In this course, you'll be communicating your knowledge of the material in written form via written assignments, such as problem sets. These assignments present you with an ideal opportunity to practice your technical communication skills.
 
@@ -28,9 +28,9 @@ I encourage you to emulate the format used in the solutions to the problem sets 
 
 4. Always start from the basic equations and simplify from there using assumptions and givens.
 
-5. Clearly identify significant assumptions you've made, and when and where you've used these assumptions (or givens) to make a simplification. Going back to item 2, the idea is to logically and unambiguously explain how you arrived at the answer.
+5. Clearly identify significant assumptions you've made, and when and where you've used these assumptions (or givens) to make a simplification. Returning to item 2, the idea is to explain, in a logical and unambiguous way, how you arrived at the answer.
 
-6. Consider using figures, diagrams, or schematics in your solution. Most of us absorb information more effectively through visual means. As needed, sketch the problem setup. Use high-quality plots to support your conclusions. Although it is helpful to have figures close to the text/results they are contributing, don't stress over precise location, especially if using LaTeX, which has its own sophisticated rules about what placement "looks best."
+6. Consider using figures, diagrams, or schematics in your solution. Most of us absorb information more effectively through visual means. As needed, sketch the problem setup. Use high-quality plots to support your conclusions. Although it is helpful to have figures close to the text/results they contribute, don't stress over precise placement, especially if using LaTeX, which has its own sophisticated rules about what placement "looks best."
 
 7. Define your variables. Be consistent in their use. Ideally, don't stray too far from the notation used in class or on the assignment.
 
@@ -72,19 +72,19 @@ I encourage you to emulate the format used in the solutions to the problem sets 
 
     In other words, review your final written solution, think about how it might look from the reader's (grader's) perspective, and revise as needed.
 
-6. To improve readability, consider doing a basic grammar check of your writing using a tool such as LanguageTool, Writefull, or Grammarly, all of which have a *free* version and integrate with Overleaf and/or via browser extensions. There's generally no need for over-the-top [purple prose](https://en.wikipedia.org/wiki/Purple_prose) in scientific writing (such as that produced by large-language models, say ChatGPT), so don't be self-concious about your writing. The simpler the better.
+6. To improve readability, consider doing a basic grammar check of your writing using a tool such as LanguageTool, Writefull, or Grammarly, all of which have a *free* version and integrate with Overleaf and/or via browser extensions. There's generally no need for over-the-top [purple prose](https://en.wikipedia.org/wiki/Purple_prose) in scientific writing (such as that produced by large-language models, say ChatGPT), so don't be self-conscious about your writing. The simpler the better.
 
 7. Although style is a personal choice, I recommend following the capitalization guidelines from the [University of Cambridge](https://www.cam.ac.uk/brand-resources/content/style-guide#C), publisher of the [*Journal of Fluid Mechanics*](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics). Specifically, "[u]se [sentence case](https://www.grammarly.com/blog/sentences/title-case-sentence-case/) for: the majority of your content".
 
 8. When preparing plots:
 
-    * Make sure the size of axes, labels, legends, etc. is easy to read. Don't use bold fonts unless you're specifically denoting vectors or tensors.
+    * Make sure the size of axes, labels, legends, etc., is easy to read. Don't use bold fonts unless you're specifically denoting vectors or tensors.
 
     * Make sure your plot symbols are clear and discernible. Don't reuse plot symbols for multiple datasets.
 
     * Don't put a title on the plot itself; any discussion of the plot (or what it represents) should be placed below it as a figure caption.
 
-    * Do not take screenshots, as they can be of low quality and [pixelated](https://upload.wikimedia.org/wikipedia/commons/3/3e/Applepix.png). Use the plotting software's built-in function (or button) to save a plot in a high-quality vector format, such as PDF.
+    * Do not take screenshots, as they may be low-quality and [pixelated](https://upload.wikimedia.org/wikipedia/commons/3/3e/Applepix.png). Use the plotting software's built-in function (or button) to save a plot in a high-quality vector format, such as PDF.
 
     * Label your axes, plot symbols, and plot curves.
 
@@ -96,7 +96,7 @@ I encourage you to emulate the format used in the solutions to the problem sets 
 
     * If your figure contains multiple subplots, say (a), (b), (c), etc., and make sure that the axis ranges are the same across subplots if you are comparing the same quantity across them.
 
-9. Tables should be reserved for cataloging many sets of values relevant to the problem, such as the thermophysical properties of the fluid, or the dimensions of the flow geometry. Generally, we will not need to do that in this course. Tables should be used sparingly. Output data and results are more effectively displayed as figures rather than tables.
+9. Tables should be reserved for cataloging many sets of values relevant to the problem, such as the fluid's thermophysical properties or the dimensions of the flow geometry. Generally, we will not need to do that in this course. Tables should be used sparingly. Output data and results are more effectively displayed as figures rather than tables.
 
 10. Never use Excel charts (especially the 3D ones and related atrocities) to convey quantitative scientific data.
 
