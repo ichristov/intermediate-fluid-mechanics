@@ -19,7 +19,7 @@ I'll kick off our casual conversations by sharing some fun web resources showing
 
 - [FYFD](https://fyfluiddynamics.com/) brings in a lot of content from the current fluid mechanics research literature.
 
-- For more bite-sized content from the current fluid mechanics literature, check out [*Physics*](https://physics.aps.org/browse/?page=1&per_page=10&sort=recent&subject_area=fluids&subject_area=soft-matter) from the APS.
+- For more bite-sized content from the current fluid mechanics literature, check out [*Physics*](https://physics.aps.org/browse/?page=1&per_page=10&sort=recent&subject_area=fluids&subject_area=soft-matter) from the APS, including a story on [microfluidic valve design](https://physics.aps.org/articles/v18/193) I was interviewed for.
 
 - [3Blue1Brown](https://www.youtube.com/@3blue1brown) for all your math explanation needs.
 
