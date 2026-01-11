@@ -29,7 +29,7 @@ I'll kick off our casual conversations by sharing some fun web resources showing
 
 - You may also take a look at [MIT's version of ME 50900](https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/), but it's a little tougher than our class.
 
-- Finally, my colleague and collaborator, Prof. [Suman Chakraborty](https://sites.google.com/site/sumanchakrabortymicrofluidics/) at IIT Kharagpur, has an [encyclopedic set of video lectures](https://nptel.ac.in/courses/112105287) covering a lot more than just ME50900 topics.
+- Finally, my colleague and collaborator, Prof. [Suman Chakraborty](https://sites.google.com/site/sumanchakrabortymicrofluidics/) at IIT Kharagpur, has an [encyclopedic set of video lectures](https://nptel.ac.in/courses/112105287) covering a lot more than just ME 50900 topics.
 
 That should keep you busy for a while! 😂
 
