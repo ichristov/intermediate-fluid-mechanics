@@ -1,13 +1,13 @@
 close all; clear all;
 
-h = 0.01; % grid spacing
+h = 0.01;   % grid spacing
 xmax = 0.5;
 ymax = 0.5;
 
 % define a mesh for the domain on which to plot
 [x,y] = meshgrid(-xmax:h:xmax,-ymax:h:ymax);
 
-
+% parameters of the example flow
 mu = 1; % strength of the doublet
 
 % in Cartesian coordinates
@@ -31,8 +31,8 @@ vth = -mu*sin(th)./(r.^2);
 vx = vr.*cos(th) - vth.*sin(th);
 vy = vr.*sin(th) + vth.*cos(th);
 
-% OR instead of polar ur, utheta from class, you could also compute
-% ux, uy from phi(x,y), which requires no transformation of velocity
+% OR instead of polar vr, vth from class, you could also compute
+% vx, vy from phi(x,y), which requires no transformation of velocity
 vx = mu*1./(x.^2+y.^2) - mu*x./((x.^2+y.^2).^2).*(2*x);
 vy = - mu*x./((x.^2+y.^2).^2).*(2*y);
 
