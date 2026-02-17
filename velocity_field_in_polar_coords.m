@@ -15,9 +15,9 @@ ymax = 2.0;
 r = sqrt(x.^2 + y.^2);   % r = sqrt(x^2+y^2)
 th = atan2(y,x);         % theta in (-pi,pi]
 
-% -----------------------------------------------
-% Define your (v_r, v_theta) in polar coordinates
-% -----------------------------------------------
+% -----------------------------------------
+% Define your (vr, vθ) in polar coordinates
+% -----------------------------------------
 w = 1;
 R = 1;
 vr  =  0*r;    % vr = 0 in this example
@@ -38,7 +38,7 @@ vy = vr .* sin(th) + vth .* cos(th);
 %vx(mask) = 0; vy(mask) = 0;
 
 % -------------------------------------------------
-% Plots: quiver (figure 1) + streamlines (figure 2)
+% Plots: quiver (figure 1) & streamlines (figure 2)
 % -------------------------------------------------
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -58,12 +58,14 @@ title('velocity vector field' ,'FontSize', 10);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 figure(2);
 
-% Speed (magnitude of velocity vector) contours + streamlines
+% Speed (magnitude of velocity vector, |\underline{v}|)
 speed = sqrt(vx.^2 + vy.^2);
 hold on;
-% Filled contours of |V|
+
+% Filled contours of |\underline{v}|
 contourf(x, y, speed, 24, 'LineStyle','none');
 colormap(parula);
+
 % If you want a colorbar (note that it changes plot size)
 cb = colorbar('Location','eastoutside');
 cb.Label.Interpreter = 'LaTeX';
@@ -71,8 +73,9 @@ cb.Label.String = '$\sqrt{v_x^2 + v_y^2}$';
 cb.Label.FontSize = 13;
 clim([0, prctile(speed(:), 99)]);
 
-% Streamlines with velocity field arrows computed by numerically
-% integrating the governing equation of streamlines, dy/dx = v/u
+% Streamlines with direction arrows computed by numerically
+% using 'streamslice', which integrates the governing equation
+% of streamlines, namely dy/dx = vy/vx
 sl = streamslice(x, y, vx, vy);
 set(sl, 'Color', 'k', 'LineWidth', 1);
 
