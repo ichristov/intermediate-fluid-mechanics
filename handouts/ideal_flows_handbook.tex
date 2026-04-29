@@ -5,11 +5,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \DocumentMetadata
  {
- % testphase = phase-I, % tagging without paragraph tagging
- testphase  = phase-II, % tagging with paragraph tagging
+ % testphase = phase-I,    % tagging without paragraph tagging
+ testphase  = phase-II,  % tagging with paragraph tagging
  % testphase  = phase-III, % tagging with paragraph sec, toc, blocks and more
- pdfversion = 2.0, % pdfversion must be set here.
- pdfstandard=ua-2, % pdfstandard can be set too
+ pdfversion = 2.0,       % pdfversion must be set here.
+ pdfstandard=ua-2,       % pdfstandard can be set too
 }
 \documentclass[10pt,landscape]{article}
 
@@ -25,6 +25,31 @@
 \usepackage{booktabs,makecell}
 \usepackage{footnote}
 \makesavenoteenv{tabular}
+
+% Patch booktabs rules (\toprule, \midrule, \bottomrule) to be PDF artifacts.
+% \makeatletter wraps \AddToHook so the body is tokenized with @ as a letter —
+% the hook body is tokenized at call time, not at execution time, so
+% \makeatletter *inside* the body would be too late for \@BTnormal etc.
+% Note: \cmidrule is already patched by latex-lab-testphase-firstaid.sty.
+% Note: \pdfliteral is pdfLaTeX-specific; LuaLaTeX/XeLaTeX would need changes.
+\makeatletter
+\AddToHook{package/booktabs/after}{%
+  \def\@BTnormal{%
+      {\CT@arc@
+       \pdfliteral{/Artifact BMC}%
+       \hrule\@height\@thisrulewidth
+       \pdfliteral{EMC}}%
+      \futurenonspacelet\@tempa\@BTendrule}%
+}
+% Patch footnote separator rule to be a PDF artifact.
+% \footnoterule runs in vertical mode so \pdfliteral works fine here.
+\def\footnoterule{%
+  \kern-3\p@
+  \pdfliteral{/Artifact BMC}%
+  \hrule width.4\columnwidth
+  \pdfliteral{EMC}%
+  \kern2.6\p@}
+\makeatother
 
 \usepackage{tikz}
 \usetikzlibrary{decorations.markings, arrows.meta, bending}
