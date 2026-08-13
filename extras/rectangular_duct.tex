@@ -1,0 +1,165 @@
+% duct.tex -- TikZ remake of duct_schematic.pdf
+% Compile with pdflatex.
+%
+% A rectangular duct of width w, height h and length L, drawn in oblique
+% projection with the near end open.  Geometry measured from the original:
+% w = 370.7, h = 169.6, L = 242.5 drawing units, receding at 16.09 degrees.
+%
+% PROJECTION.  y runs left along the front edge, z up, x into the picture at
+% \xang above the horizontal.  x cross y = z is *not* satisfied by a naive
+% reading -- see the handedness note by the axes below.
+%
+% SHADING.  The original gave its faces 244, 239, 236 and 233 out of 255 -- a
+% 4% spread that reads as one flat tone.  Here the three visible faces take a
+% proper ramp, lightest on the top and darkest on the floor, so the box reads
+% as a solid.  Each tone is decoration: the 2.00pt edges identify the form.
+%
+% Sizing: set the class option and \ptbase to your document's point size.
+\documentclass[10pt,border=2pt]{standalone}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\newif\ifcolour
+\colourtrue
+\ifcolour
+  \definecolor{axcol}{HTML}{B03030}      % the triad, as in coating.tex
+\else
+  \colorlet{axcol}{black}
+\fi
+% The two outer faces are translucent, so the far edges read through them and
+% the back-left corner is one continuous line rather than solid-then-dashed.
+% Every face is translucent and toned by its surface normal, not by whether it
+% is inside or out: the two horizontal faces share one tone and the two
+% vertical faces another, which is what a single overhead light would give.
+% Toning by inside/out instead made the floor and the near side wall the two
+% darkest areas, which weighted the lower left of the figure for no reason.
+% Depth now comes from the overlaps -- two layers composite darker than one --
+% and from the edges, rather than from an arbitrary interior/exterior ramp.
+\newcommand{\falpha}{0.50}
+\definecolor{fhoriz}{gray}{0.86}         % ceiling and floor; composite 0.93
+\definecolor{fvert}{gray}{0.72}          % both side walls;   composite 0.86
+
+% ---- scale ----------------------------------------------------------------
+\newcommand{\ptbase}{10}
+\pgfmathsetmacro{\gs}{\ptbase/25}
+\pgfmathsetmacro{\dsz}{\ptbase/10}
+\pgfmathsetmacro{\wallw} {2.00*\dsz}     % visible edges
+\pgfmathsetmacro{\arrw}  {0.85*\dsz}     % every arrow
+\pgfmathsetmacro{\lgap}  {3.0/\gs}       % axis labels sit 3.0pt off their tip
+
+% ---- geometry (drawing units; 1 unit = 1pt at original size) --------------
+\newcommand{\ww}{370.7}       % duct width, along y
+\newcommand{\hh}{169.6}       % duct height, along z
+\newcommand{\LL}{242.5}       % duct length, along x
+\newcommand{\xang}{16.09}     % receding angle
+\newcommand{\arm}{76.0}       % all three axis arrows
+
+% oblique projection: P(x,y,z)
+\pgfmathsetmacro{\ex}{cos(\xang)}
+\pgfmathsetmacro{\ez}{sin(\xang)}
+% arguments are parenthesised: a compound argument such as \dh+2*\lgap
+% would otherwise bind as -(\dh)+2*\lgap and land on the wrong side
+\newcommand{\pt}[3]{({(#1)*\ex-(#2)},{(#1)*\ez+(#3)})}
+
+\begin{document}
+\begin{tikzpicture}[
+    x={\gs pt}, y={\gs pt},
+    head/.style   ={-{Stealth[length=6.4*\dsz pt,width=4.3*\dsz pt,
+                              inset=1.2*\dsz pt]}},
+    dblhead/.style={{Stealth[length=6.4*\dsz pt,width=4.3*\dsz pt,
+                              inset=1.2*\dsz pt]}-{Stealth[length=6.4*\dsz pt,
+                              width=4.3*\dsz pt,inset=1.2*\dsz pt]}},
+    % round, not miter: the shallow corners here are 16 degrees, where a
+    % miter would extend 7x the half-width -- the spike from spec section 9
+    edge/.style   ={black, line width=\wallw pt, line join=round},
+    axarrow/.style={axcol, line width=\arrw pt, head},
+    dimen/.style  ={black, line width=\arrw pt, dblhead},
+    lbl/.style    ={inner sep=0pt, outer sep=0pt},
+  ]
+
+  % ---- the visible faces, back to front -----------------------------------
+  % The duct is closed on all four sides and open only at x = 0 and x = L, so
+  % through the near opening we see the inner left wall and the inner floor,
+  % and only the overlap of the two openings shows the background.  The inner
+  % wall's projection ends exactly where that overlap begins, so filling both
+  % and drawing the outer surfaces over them needs no clipping.
+  % inner left wall, at y = +w/2, seen from inside
+  \fill[fvert, fill opacity=\falpha] \pt{0}{0.5*\ww}{0} -- \pt{0}{0.5*\ww}{\hh}
+             -- \pt{\LL}{0.5*\ww}{\hh} -- \pt{\LL}{0.5*\ww}{0} -- cycle;
+  % floor: y from -w/2 to +w/2, x from 0 to L
+  \fill[fhoriz, fill opacity=\falpha] \pt{0}{-0.5*\ww}{0} -- \pt{0}{0.5*\ww}{0}
+             -- \pt{\LL}{0.5*\ww}{0} -- \pt{\LL}{-0.5*\ww}{0} -- cycle;
+  % the far opening's near-side edges, visible through the near opening
+  % closed outlines throughout: a vertex inside one path is a miter join, but
+  % where two separate paths meet, each contributes a butt cap and the pair
+  % overhangs the corner.
+  % drawn before the translucent outer faces, so the far-left vertical reads
+  % through the ceiling as one unbroken line
+  \draw[edge] \pt{0}{0.5*\ww}{0} -- \pt{\LL}{0.5*\ww}{0}
+           -- \pt{\LL}{0.5*\ww}{\hh} -- \pt{0}{0.5*\ww}{\hh} -- cycle;
+  \draw[edge] \pt{0}{-0.5*\ww}{0} -- \pt{\LL}{-0.5*\ww}{0}
+           -- \pt{\LL}{0.5*\ww}{0} -- \pt{0}{0.5*\ww}{0} -- cycle;
+  % right-hand side wall, at y = -w/2
+  \fill[fvert, fill opacity=\falpha] \pt{0}{-0.5*\ww}{0} -- \pt{0}{-0.5*\ww}{\hh}
+            -- \pt{\LL}{-0.5*\ww}{\hh} -- \pt{\LL}{-0.5*\ww}{0} -- cycle;
+  % ceiling, seen from outside
+  \fill[fhoriz, fill opacity=\falpha] \pt{0}{-0.5*\ww}{\hh} -- \pt{0}{0.5*\ww}{\hh}
+           -- \pt{\LL}{0.5*\ww}{\hh} -- \pt{\LL}{-0.5*\ww}{\hh} -- cycle;
+
+
+  % ---- visible edges ------------------------------------------------------
+  % outer right wall
+  \draw[edge] \pt{0}{-0.5*\ww}{0} -- \pt{\LL}{-0.5*\ww}{0}
+           -- \pt{\LL}{-0.5*\ww}{\hh} -- \pt{0}{-0.5*\ww}{\hh} -- cycle;
+  % ceiling
+  \draw[edge] \pt{0}{-0.5*\ww}{\hh} -- \pt{\LL}{-0.5*\ww}{\hh}
+           -- \pt{\LL}{0.5*\ww}{\hh} -- \pt{0}{0.5*\ww}{\hh} -- cycle;
+  % the near opening
+  \draw[edge] \pt{0}{0.5*\ww}{0} -- \pt{0}{-0.5*\ww}{0}
+           -- \pt{0}{-0.5*\ww}{\hh} -- \pt{0}{0.5*\ww}{\hh} -- cycle;
+
+  % ---- coordinate triad at the centre of the near bottom edge ------------
+  % x into the picture, y to the left, z up: x cross y = z, right-handed.
+  % x is the flow direction along the duct.
+  % The origin sits on the bottom front edge, at its midpoint.  y therefore
+  % runs along that edge -- the swallowed case from the spec -- but here the
+  % triad is red against a black edge, so the two separate by hue and the
+  % overlap reads as the axis lying in the plane of the wall, which it does.
+  % Labels are placed in screen coordinates, each just beyond its arrowhead.
+  \draw[axarrow] (0,0) -- ({\arm*\ex},{\arm*\ez});
+  \draw[axarrow] (0,0) -- (-\arm,0);
+  \draw[axarrow] (0,0) -- (0,\arm);
+  % Spec: offset \lgap perpendicular, on the clockwise side of the direction of
+  % travel.  x is the oblique case -- rotated and hanging below its own axis.
+  % y points LEFT, so its clockwise side is above, and the anchor mirrors the
+  % table's rightward form: south east rather than north west.  z is the
+  % plain vertical case.
+  \node[lbl, anchor=north west, rotate=\xang, axcol]
+       at ({\arm*\ex+\lgap*cos(\xang-90)},{\arm*\ez+\lgap*sin(\xang-90)}) {$x$};
+  \node[lbl, anchor=south east, axcol] at (-\arm,\lgap) {$y$};
+  \node[lbl, anchor=west,       axcol] at (\lgap,\arm)  {$z$};
+  % ---- dimensions ---------------------------------------------------------
+  % all three labels stand \lgap = 3.0pt clear of their own dimension line,
+  % measured perpendicular to it
+  \pgfmathsetmacro{\dw}{22.0}
+  \draw[dimen] \pt{0}{-0.5*\ww}{-\dw} -- \pt{0}{0.5*\ww}{-\dw};
+  \node[lbl, anchor=north] at \pt{0}{0}{-\dw-\lgap} {$w$};
+  \pgfmathsetmacro{\dh}{0.30*\ww}
+  \draw[dimen] \pt{0}{\dh}{0} -- \pt{0}{\dh}{\hh};
+  \node[lbl, anchor=west] at \pt{0}{\dh-\lgap}{0.5*\hh} {$h$};
+  % offset perpendicular to the receding edge, so it runs parallel to it
+  \pgfmathsetmacro{\dl}{22.0}
+  % the offset is a screen-space vector, so it is added inside \pt's own
+  % coordinate expression rather than applied as a TikZ shift
+  \pgfmathsetmacro{\ox}{\dl*sin(\xang)}
+  \pgfmathsetmacro{\oz}{-\dl*cos(\xang)}
+  \draw[dimen] ({-0.5*\ww*-1+\ox},{\oz})
+            -- ({\LL*\ex+0.5*\ww+\ox},{\LL*\ez+\oz});
+  % offset along the line's unit normal (\ez,-\ex) by \lgap, so its
+  % perpendicular clearance matches w and h rather than being set by eye
+  \node[lbl, anchor=north west]
+       at ({0.5*\LL*\ex+0.5*\ww+\ox+\lgap*\ez},{0.5*\LL*\ez+\oz-\lgap*\ex}) {$L$};
+
+\end{tikzpicture}
+\end{document}
