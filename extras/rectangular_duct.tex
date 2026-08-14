@@ -47,6 +47,13 @@
 \pgfmathsetmacro{\wallw} {2.00*\dsz}     % visible edges
 \pgfmathsetmacro{\arrw}  {0.85*\dsz}     % every arrow
 \pgfmathsetmacro{\lgap}  {3.0/\gs}       % axis labels sit 3.0pt off their tip
+% Extension lines, per ISO 129-1: from the feature to just past the dimension
+% line, with a visible gap at the object so they read as annotation rather
+% than geometry.  Only where the dimension is offset -- w and L are; h ends on
+% the floor and ceiling themselves.
+\pgfmathsetmacro{\halfe} {0.5*\wallw/\gs}  % half an edge, in units
+\pgfmathsetmacro{\extgap}{1.2/\gs}
+\pgfmathsetmacro{\extrun}{2.0/\gs}
 
 % ---- geometry (drawing units; 1 unit = 1pt at original size) --------------
 \newcommand{\ww}{370.7}       % duct width, along y
@@ -75,6 +82,7 @@
     edge/.style   ={black, line width=\wallw pt, line join=round},
     axarrow/.style={axcol, line width=\arrw pt, head},
     dimen/.style  ={black, line width=\arrw pt, dblhead},
+    ext/.style    ={black, line width=0.60*\dsz pt},
     lbl/.style    ={inner sep=0pt, outer sep=0pt},
   ]
 
@@ -143,10 +151,19 @@
   % all three labels stand \lgap = 3.0pt clear of their own dimension line,
   % measured perpendicular to it
   \pgfmathsetmacro{\dw}{22.0}
+  % w drops straight down from the two front bottom corners
+  \draw[ext] \pt{0}{-0.5*\ww}{-\extgap} -- \pt{0}{-0.5*\ww}{-\dw-\extrun};
+  \draw[ext] \pt{0}{0.5*\ww}{-\extgap}  -- \pt{0}{0.5*\ww}{-\dw-\extrun};
   \draw[dimen] \pt{0}{-0.5*\ww}{-\dw} -- \pt{0}{0.5*\ww}{-\dw};
   \node[lbl, anchor=north] at \pt{0}{0}{-\dw-\lgap} {$w$};
-  \pgfmathsetmacro{\dh}{0.30*\ww}
-  \draw[dimen] \pt{0}{\dh}{0} -- \pt{0}{\dh}{\hh};
+  % Mirrored to the right of the triad.  On the left the bottom arrowhead's
+  % tail came within 1.2pt of the floor's receding left edge; on the right
+  % that edge has ended, the nearest object line is the floor's far edge
+  % 19.5pt away, and most of the arrow stands on the white see-through.
+  \pgfmathsetmacro{\dh}{-0.30*\ww}
+  % stop at the inner faces, not the centrelines: z = 0 and z = h are the
+  % centres of 2.00pt edges, so the arrowheads were burying 1.00pt in each
+  \draw[dimen] \pt{0}{\dh}{\halfe} -- \pt{0}{\dh}{\hh-\halfe};
   \node[lbl, anchor=west] at \pt{0}{\dh-\lgap}{0.5*\hh} {$h$};
   % offset perpendicular to the receding edge, so it runs parallel to it
   \pgfmathsetmacro{\dl}{22.0}
@@ -154,6 +171,14 @@
   % coordinate expression rather than applied as a TikZ shift
   \pgfmathsetmacro{\ox}{\dl*sin(\xang)}
   \pgfmathsetmacro{\oz}{-\dl*cos(\xang)}
+  % L runs perpendicular from the near and far bottom-right corners, along the
+  % same screen-space normal the dimension line is offset by
+  \pgfmathsetmacro{\ux}{sin(\xang)}
+  \pgfmathsetmacro{\uz}{-cos(\xang)}
+  \draw[ext] ({0.5*\ww+\extgap*\ux},{\extgap*\uz})
+          -- ({0.5*\ww+(\dl+\extrun)*\ux},{(\dl+\extrun)*\uz});
+  \draw[ext] ({\LL*\ex+0.5*\ww+\extgap*\ux},{\LL*\ez+\extgap*\uz})
+          -- ({\LL*\ex+0.5*\ww+(\dl+\extrun)*\ux},{\LL*\ez+(\dl+\extrun)*\uz});
   \draw[dimen] ({-0.5*\ww*-1+\ox},{\oz})
             -- ({\LL*\ex+0.5*\ww+\ox},{\LL*\ez+\oz});
   % offset along the line's unit normal (\ez,-\ex) by \lgap, so its
