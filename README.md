@@ -22,7 +22,7 @@ The repository mainly consists of Jupyter notebooks used for hands-on demos in l
   * [Womersley flow](extras/Womersley_flow.ipynb) &mdash; flow in a 2D channel and a 3D axisymmetric tube driven by a periodically pulsating pressure gradient, including animations.
   * [Rectangular duct flow](extras/rectangular_duct.ipynb) &mdash; Fourier series solution for pressure-driven flow in a 3D duct.
 
-* Flow fields with two velocity components:
+* Flow fields with two or more velocity components:
   * [Asymptotic suction flow](extras/asymptotic_suction_flow.ipynb) &mdash; a fully-developed flow field with two velocity components.
   * [Ideal flows in 2D](ideal_flows_2D.ipynb) &mdash; having fun with functions of a complex variable.
   * [Boundary layers](boundary_layers.ipynb) &mdash; everything you need to know about Blasius' problem.
