@@ -10,5 +10,6 @@ Feel free to explore:
 * [Rectangular duct flow](rectangular_duct.ipynb) &mdash; Fourier series solution for pressure-driven flow in a 3D duct.
 * [Slip flow in a channel](slip_flow_channel.ipynb) &mdash; a pressure-driven flow with Navier slip in a 2D channel, arising from microfluidics.
 * [Womersley flow](Womersley_flow.ipynb) &mdash; flow in a 2D channel and a 3D axisymmetric tube driven by a periodically pulsating pressure gradient, including animations.
+* [Navier&ndash;Stokes blow-up vortex](NS_blowup_vortex.ipynb) &mdash; a cartoon of the self-similar swirling vortex behind the 2026 finite-time singularity claim (hot off the press; might need updates as the topic evolves).
 
 Enjoy. Cheers! 🍺

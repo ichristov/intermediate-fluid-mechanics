@@ -30,6 +30,7 @@ The repository mainly consists of Jupyter notebooks used for hands-on demos in l
   * [Stokes flow past sphere](Stokes_flow_past_sphere.ipynb) &mdash; heavy-duty calculations in spherical coordinates.
   * [Wavy channel flow](wavy_channel.ipynb) &mdash; the pressure drop along a wavy channel from lubrication theory.
   * [Slipper pad bearing](slipper_pad_bearing.ipynb) &mdash; a classic application of Reynolds' lubrication equation.
+  * [Navier&ndash;Stokes blow-up vortex](extras/NS_blowup_vortex.ipynb) &mdash; a cartoon of the self-similar swirling vortex behind the 2026 finite-time singularity claim (hot off the press; might need updates as the topic evolves).
 
 * Dimensional analysis:
   * [Dimensional analysis](dimensional_analysis.ipynb) &mdash; Buckingham's $\Pi$ theorem is just the rank&ndash;nullity theorem in disguise.
