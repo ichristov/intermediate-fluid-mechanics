@@ -3,6 +3,7 @@
 
 import json
 import subprocess
+import uuid
 from pathlib import Path
 
 
@@ -48,7 +49,11 @@ def main():
         print(f"[{i}/{len(notebooks)}] {rel}")
 
         # Show status
-        has = 'colab-badge' in nb.read_text()
+        if subprocess.run(['git', 'check-ignore', '-q', str(nb)]).returncode == 0:
+            print("  Skipped: gitignored, so a Colab badge would 404\n")
+            continue
+
+        has = 'colab-badge' in nb.read_text(encoding='utf-8')
         print(f"  Badge: {'exists' if has else 'missing'}")
 
         # Confirm
@@ -61,21 +66,32 @@ def main():
                 continue
 
         # Add badge
-        data = json.loads(nb.read_text())
+        data = json.loads(nb.read_text(encoding='utf-8'))
         url = f"https://colab.research.google.com/github/{user}/{repo}/blob/{branch}/{rel}"
-        badge = {
-            "cell_type": "markdown",
-            "metadata": {},
-            "source": [f"[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]({url})\n"]
-        }
+        source = [f"[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]({url})\n"]
 
         cells = data.get('cells', [])
-        if cells and 'colab-badge' in str(cells[0]):
+        replacing = bool(cells) and 'colab-badge' in str(cells[0])
+
+        if data.get('nbformat_minor', 0) >= 5:
+            # nbformat 4.5 wants an id on every cell; keep the one we are replacing.
+            # Key order matches how Jupyter writes cells, so rewrites stay diff-free.
+            cell_id = cells[0].get('id') if replacing else None
+            badge = {
+                "cell_type": "markdown",
+                "id": cell_id or uuid.uuid4().hex[:8],
+                "metadata": {},
+                "source": source
+            }
+        else:
+            badge = {"cell_type": "markdown", "metadata": {}, "source": source}
+
+        if replacing:
             cells[0] = badge
         else:
             cells.insert(0, badge)
 
-        nb.write_text(json.dumps(data, indent=1) + '\n')
+        nb.write_text(json.dumps(data, indent=1, ensure_ascii=False) + '\n', encoding='utf-8')
         print(f"  ✓ {'Updated' if has else 'Added'}\n")
         done += 1
 
