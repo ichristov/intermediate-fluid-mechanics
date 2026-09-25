@@ -48,6 +48,11 @@ The repository mainly consists of Jupyter notebooks used for hands-on demos in l
 | [Dimensional analysis](dimensional_analysis.ipynb) | Buckingham's $\Pi$ theorem is just the rank&ndash;nullity theorem in disguise | [![Open in nbviewer](https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.svg)](https://nbviewer.org/github/ichristov/intermediate-fluid-mechanics/blob/main/dimensional_analysis.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ichristov/intermediate-fluid-mechanics/blob/main/dimensional_analysis.ipynb) |
 | [Taylor and the bomb](Taylor_and_the_bomb.ipynb) | how G. I. Taylor estimated the energetic yield of the Trinity test | [![Open in nbviewer](https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.svg)](https://nbviewer.org/github/ichristov/intermediate-fluid-mechanics/blob/main/Taylor_and_the_bomb.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ichristov/intermediate-fluid-mechanics/blob/main/Taylor_and_the_bomb.ipynb) |
 
+## 📝 Handy handouts
+
+Check out the [handouts](handouts) folder for summary sheets, a tensor algebra
+primer, writing tips, and fun web resources.
+
 ## Running the notebooks
 
 Click **Run** in any row above to open that notebook in Colab; nothing to install.
@@ -62,8 +67,6 @@ jupyter lab
 ```
 
 ⚠️ The notebooks are unlikely to be robust and may require updates to run on different platforms, and as underlying Python libraries evolve.
-
-📝 Also, checkout the [handouts](handouts) folder.
 
 ## 📚 Some resources for self-learning Jupyter, Python, and $\LaTeX$
 

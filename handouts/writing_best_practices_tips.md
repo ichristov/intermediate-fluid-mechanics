@@ -60,7 +60,7 @@ I encourage you to emulate the format used in the solutions to the problem sets 
 
 4. Number pages in your document.
 
-5. As Dr. Nicole Sharp points out in her article "[Adopting a communication lifestyle](https://dx.doi.org/10.1103/PhysRevFluids.5.110515)" ([access via Purdue libraries](https://journals-aps-org.ezproxy.lib.purdue.edu/prfluids/abstract/10.1103/PhysRevFluids.5.110515); login required), craft your submission by
+5. As Dr. Nicole Sharp points out in her article "[Adopting a communication lifestyle](https://doi.org/10.1103/PhysRevFluids.5.110515)", craft your submission by
 
     * identifying big-picture issues around goals, audience, and message;
 

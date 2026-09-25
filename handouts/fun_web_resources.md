@@ -2,17 +2,17 @@
 
 I'll kick off our casual conversations by sharing some fun web resources showing fluid mechanics demonstrations, as well as YouTube channels you can follow that post such videos.
 
-- I've already mentioned the [National Committee for Fluid Mechanics Films](http://web.mit.edu/hml/ncfmf.html) (NCFMF), I firmly believe these remain the best videos about fluid mechanics ever made. They are aimed at someone at the level of an ME 50900 student.
+- I've already mentioned the [National Committee for Fluid Mechanics Films](https://hml.mit.edu/ncfmf/) (NCFMF), I firmly believe these remain the best videos about fluid mechanics ever made. They are aimed at someone at the level of an ME 50900 student.
 
 - [Steve Mould](https://www.youtube.com/stevemould) often has curious demonstrations.
 
-- [Physics Girl](https://www.youtube.com/@physicsgirl/search?query=(fluid%20OR%20flow)) picks insightful problems, and sometimes they are fluid-related.
+- [Physics Girl](https://www.youtube.com/@physicsgirl/search?query=%28fluid%20OR%20flow%29) picks insightful problems, and sometimes they are fluid-related.
 
 - [SmarterEveryDays](https://www.youtube.com/@smartereveryday) is a lot of fun (dig into the channel for the laminar vs. turbulent flow debate).
 
 - [Veritasium](https://www.youtube.com/@veritasium) is another great pop-sci channel.
 
-- [Sixty Symbols](https://www.youtube.com/@sixtysymbols/search?query=(fluid%20OR%20flow)) has several good fluids videos (about pressure, the 'paradox' of flight, instabilities, etc.).
+- [Sixty Symbols](https://www.youtube.com/@sixtysymbols/search?query=%28fluid%20OR%20flow%29) has several good fluids videos (about pressure, the 'paradox' of flight, instabilities, etc.).
 
 - [Practical Engineering](https://www.youtube.com/@PracticalEngineeringChannel) often talks about fluid mechanics problems that
   arise in civil engineering, and the demonstrations are very nice.
