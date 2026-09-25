@@ -1,7 +1,8 @@
-# ME 50900 &ndash; Intermediate Fluid Mechanics
+# ME 50900 &ndash; Intermediate Fluid Mechanics at Purdue University
 
-This is a GitHub repository for ME 50900 &ndash; Intermediate Fluid Mechanics at Purdue University, as taught by Prof. [Ivan C. Christov](https://christov.tmnt-lab.org).
-The repository mainly consists of Jupyter notebooks used for hands-on demos in lectures, continuous knowledge acquisition, problem-set solutions, and enrichment activities.
+Jupyter notebooks for ME 50900 &ndash; Intermediate Fluid Mechanics at Purdue University taught by Prof. [Ivan C. Christov](https://christov.tmnt-lab.org).
+The notebooks cover tensors, unidirectional flows, the Navier&ndash;Stokes equations, dimensional analysis, similarity solutions, boundary layers, Stokes flow, and lubrication theory, using Python with SymPy for symbolic calculations and Matplotlib for visualizations.
+They serve as hands-on demos in lectures, problem-set solutions, and enrichment activities, and each one opens in Google Colab with nothing to install.
 
 🚀 Getting started (rough grouping of notebooks based on course topics):
 
@@ -67,8 +68,9 @@ primer, writing tips, and fun web resources.
 
 ## Running the notebooks
 
-Click **Run** in any row above to open that notebook in Colab; nothing to install.
-Click **View** to read it in nbviewer, including the animations, without running anything.
+Click the Colab badge in any row above to run that notebook in your browser; nothing to install.
+Click the nbviewer badge to read it without running anything. Animations are not saved in the notebooks, so run the notebook in Colab to see them.
+
 To work locally instead:
 
 ```bash
@@ -82,7 +84,7 @@ jupyter lab
 
 ## 📚 Some resources for self-learning Jupyter, Python, and $\LaTeX$
 
-* Google Colaboratory lets open Jupyter notebooks from GitHub and run them in the cloud from your browser: <https://colab.research.google.com>.
+* Google Colaboratory lets you open Jupyter notebooks from GitHub and run them in the cloud from your browser: <https://colab.research.google.com>.
   * See the [getting started with Markdown](https://www.markdownguide.org/getting-started/) guide for how to write nice discussion between your computational cells in the Jupyter notebook.
   * More advanced programmers may find the following links useful: [Introduction to Git in VS Code](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git), [Jupyter Notebooks in VS Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks).
 
