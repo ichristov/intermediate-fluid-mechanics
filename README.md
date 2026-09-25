@@ -1,6 +1,6 @@
 # ME 50900 &ndash; Intermediate Fluid Mechanics
 
-This is a GitHub repository for ME 50900 &ndash; Intermediate Fluid Mechanics at Purdue University, as taught by Prof. [Ivan C. Christov](HTTPS://christov.tmnt-lab.org).
+This is a GitHub repository for ME 50900 &ndash; Intermediate Fluid Mechanics at Purdue University, as taught by Prof. [Ivan C. Christov](https://christov.tmnt-lab.org).
 The repository mainly consists of Jupyter notebooks used for hands-on demos in lectures, continuous knowledge acquisition, problem-set solutions, and enrichment activities.
 
 🚀 Getting started (rough grouping of notebooks based on course topics):
@@ -47,6 +47,19 @@ The repository mainly consists of Jupyter notebooks used for hands-on demos in l
 |---|---|---|---|
 | [Dimensional analysis](dimensional_analysis.ipynb) | Buckingham's $\Pi$ theorem is just the rank&ndash;nullity theorem in disguise | [![Open in nbviewer](https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.svg)](https://nbviewer.org/github/ichristov/intermediate-fluid-mechanics/blob/main/dimensional_analysis.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ichristov/intermediate-fluid-mechanics/blob/main/dimensional_analysis.ipynb) |
 | [Taylor and the bomb](Taylor_and_the_bomb.ipynb) | how G. I. Taylor estimated the energetic yield of the Trinity test | [![Open in nbviewer](https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.svg)](https://nbviewer.org/github/ichristov/intermediate-fluid-mechanics/blob/main/Taylor_and_the_bomb.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ichristov/intermediate-fluid-mechanics/blob/main/Taylor_and_the_bomb.ipynb) |
+
+## Running the notebooks
+
+Click **Run** in any row above to open that notebook in Colab; nothing to install.
+Click **View** to read it in nbviewer, including the animations, without running anything.
+To work locally instead:
+
+```bash
+git clone https://github.com/ichristov/intermediate-fluid-mechanics
+cd intermediate-fluid-mechanics
+python3 -m pip install -r requirements.txt     # or: conda env create -f environment.yml
+jupyter lab
+```
 
 ⚠️ The notebooks are unlikely to be robust and may require updates to run on different platforms, and as underlying Python libraries evolve.
 

@@ -1,0 +1,16 @@
+name: intermediate-fluid-mechanics
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.10
+  - numpy>=1.26
+  - scipy>=1.11
+  - sympy>=1.12
+  - matplotlib>=3.8
+  - ipywidgets>=7.8
+  - requests>=2.31
+  - jupyter
+  # solve-dae is on PyPI only, not conda-forge
+  - pip
+  - pip:
+      - solve-dae>=0.2
