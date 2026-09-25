@@ -1,7 +1,7 @@
 # ME 50900 &ndash; Intermediate Fluid Mechanics at Purdue University
 
 Jupyter notebooks for ME 50900 &ndash; Intermediate Fluid Mechanics at Purdue University taught by Prof. [Ivan C. Christov](https://christov.tmnt-lab.org).
-The notebooks cover tensors, unidirectional flows, the Navier&ndash;Stokes equations, dimensional analysis, similarity solutions, boundary layers, Stokes flow, and lubrication theory, using Python with SymPy for symbolic calculations and Matplotlib for visualizations.
+The notebooks cover tensors, kinematics, unidirectional flows, the Navier&ndash;Stokes equations, ideal flow, dimensional analysis, similarity solutions, boundary layers, Stokes flow, and lubrication theory, using Python with SymPy for symbolic calculations and Matplotlib for visualizations.
 They serve as hands-on demos in lectures, problem-set solutions, and enrichment activities, and each one opens in Google Colab with nothing to install.
 
 🚀 Getting started (rough grouping of notebooks based on course topics):
