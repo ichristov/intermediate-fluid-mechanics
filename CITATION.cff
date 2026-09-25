@@ -1,0 +1,78 @@
+cff-version: 1.2.0
+message: "If you use these materials, please cite them as below."
+type: software
+title: "ME 50900 – Intermediate Fluid Mechanics at Purdue University: Jupyter notebooks"
+abstract: >-
+  Jupyter notebooks for ME 50900, Intermediate Fluid Mechanics, at Purdue
+  University. The notebooks cover tensors, kinematics, unidirectional flows,
+  the Navier–Stokes equations, ideal flow, dimensional analysis, similarity
+  solutions, boundary layers, Stokes flow, and lubrication theory, using
+  Python with SymPy for symbolic calculations and Matplotlib for
+  visualizations. Each notebook opens in Google Colab with nothing to install.
+authors:
+  - family-names: Christov
+    given-names: Ivan C.
+    orcid: "https://orcid.org/0000-0001-8531-0531"
+    affiliation: Purdue University
+repository-code: "https://github.com/ichristov/intermediate-fluid-mechanics"
+url: "https://engineering.purdue.edu/ME509/"
+license: GPL-3.0-only
+keywords:
+  - fluid mechanics
+  - fluid dynamics
+  - viscous flow
+  - incompressible flow
+  - tensor calculus
+  - kinematics
+  - flow visualization
+  - streamlines
+  - pathlines
+  - streaklines
+  - material derivative
+  - streamfunction
+  - vorticity
+  - Navier–Stokes equations
+  - exact solutions
+  - unidirectional flow
+  - Couette flow
+  - Poiseuille flow
+  - pipe flow
+  - duct flow
+  - slip flow
+  - microfluidics
+  - Stokes' first problem
+  - Stokes' second problem
+  - Womersley flow
+  - pulsatile flow
+  - Lamb–Oseen vortex
+  - asymptotic suction profile
+  - ideal flow
+  - potential flow
+  - complex potential
+  - boundary layers
+  - Blasius boundary layer
+  - Stokes flow
+  - creeping flow
+  - biharmonic equation
+  - Moffatt eddies
+  - Stokes drag
+  - lubrication theory
+  - Reynolds equation
+  - slider bearing
+  - Navier–Stokes regularity
+  - finite-time singularity
+  - dimensional analysis
+  - Buckingham Pi theorem
+  - blast wave
+  - similarity solutions
+  - self-similarity
+  - Jupyter notebooks
+  - Python
+  - Google Colab
+  - SymPy
+  - Matplotlib
+  - symbolic computation
+  - teaching materials
+  - open educational resources
+  - engineering education
+  - Purdue University
