@@ -8,7 +8,7 @@
 
 ![Schematic of four flows from the course, under the printed text ME 50900, Intermediate Fluid Mechanics, Purdue University, Computational lecturebook. Left to right: a family of velocity profiles between two parallel walls; velocity profiles spreading upward from a suddenly moved plate over time; velocity profiles above an oscillating plate, inside a dashed envelope that decays with height; and a sequence of eddies in a wedge that opens upward, alternating in color and shrinking toward the corner at the bottom.](assets/cover.png)
 
-Jupyter notebooks for ME 50900 &ndash; Intermediate Fluid Mechanics at Purdue University taught by Prof. [Ivan C. Christov](https://christov.tmnt-lab.org).
+Jupyter-based computational lecturebook for ME 50900 &ndash; Intermediate Fluid Mechanics at Purdue University taught by Prof. [Ivan C. Christov](https://christov.tmnt-lab.org).
 The notebooks cover tensors, kinematics, unidirectional flows, the Navier&ndash;Stokes equations, dimensional analysis, similarity solutions, ideal flow, boundary layers, Stokes flow, and lubrication theory, using Python with SymPy for symbolic calculations and Matplotlib for visualizations.
 They serve as hands-on demos in lectures, problem-set solutions, and enrichment activities, and each one opens in Google Colab with nothing to install.
 
