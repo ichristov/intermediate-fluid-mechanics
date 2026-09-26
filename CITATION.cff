@@ -5,8 +5,8 @@ title: "ME 50900 – Intermediate Fluid Mechanics at Purdue University: Jupyter 
 abstract: >-
   Jupyter notebooks for ME 50900, Intermediate Fluid Mechanics, at Purdue
   University. The notebooks cover tensors, kinematics, unidirectional flows,
-  the Navier–Stokes equations, ideal flow, dimensional analysis, similarity
-  solutions, boundary layers, Stokes flow, and lubrication theory, using
+  the Navier–Stokes equations, dimensional analysis, similarity solutions,
+  ideal flow, boundary layers, Stokes flow, and lubrication theory, using
   Python with SymPy for symbolic calculations and Matplotlib for
   visualizations. Each notebook opens in Google Colab with nothing to install.
 authors:

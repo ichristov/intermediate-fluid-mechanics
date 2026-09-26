@@ -7,12 +7,17 @@
 [![GitHub stars](https://img.shields.io/github/stars/ichristov/intermediate-fluid-mechanics?style=social)](https://github.com/ichristov/intermediate-fluid-mechanics)
 
 Jupyter notebooks for ME 50900 &ndash; Intermediate Fluid Mechanics at Purdue University taught by Prof. [Ivan C. Christov](https://christov.tmnt-lab.org).
-The notebooks cover tensors, kinematics, unidirectional flows, the Navier&ndash;Stokes equations, ideal flow, dimensional analysis, similarity solutions, boundary layers, Stokes flow, and lubrication theory, using Python with SymPy for symbolic calculations and Matplotlib for visualizations.
+The notebooks cover tensors, kinematics, unidirectional flows, the Navier&ndash;Stokes equations, dimensional analysis, similarity solutions, ideal flow, boundary layers, Stokes flow, and lubrication theory, using Python with SymPy for symbolic calculations and Matplotlib for visualizations.
 They serve as hands-on demos in lectures, problem-set solutions, and enrichment activities, and each one opens in Google Colab with nothing to install.
 
-🚀 Getting started (rough grouping of notebooks based on course topics):
+## 🚀 Getting started
 
-## Kinematics
+The notebooks are grouped roughly by course topic.
+Click a notebook's name to read it on GitHub.
+Click the Colab badge in any row to run that notebook in your browser; nothing to install.
+Click the nbviewer badge to read it without running anything. Animations are not saved in the notebooks, so run the notebook in Colab to see them.
+
+### Kinematics
 
 <table>
 <thead><tr><th>Notebook</th><th>Topic</th><th width="120">Open</th></tr></thead>
@@ -24,7 +29,7 @@ They serve as hands-on demos in lectures, problem-set solutions, and enrichment 
 </tbody>
 </table>
 
-## Dynamics of unidirectional flows
+### Dynamics of unidirectional flows
 
 <table>
 <thead><tr><th>Notebook</th><th>Topic</th><th width="120">Open</th></tr></thead>
@@ -41,7 +46,7 @@ They serve as hands-on demos in lectures, problem-set solutions, and enrichment 
 </tbody>
 </table>
 
-## Flow fields with two or more velocity components
+### Flow fields with two or more velocity components
 
 <table>
 <thead><tr><th>Notebook</th><th>Topic</th><th width="120">Open</th></tr></thead>
@@ -57,7 +62,7 @@ They serve as hands-on demos in lectures, problem-set solutions, and enrichment 
 </tbody>
 </table>
 
-## Dimensional analysis
+### Dimensional analysis
 
 <table>
 <thead><tr><th>Notebook</th><th>Topic</th><th width="120">Open</th></tr></thead>
@@ -67,18 +72,11 @@ They serve as hands-on demos in lectures, problem-set solutions, and enrichment 
 </tbody>
 </table>
 
-## 📝 Handy handouts
+## 💻 Running the notebooks
 
-Check out the [handouts](handouts) folder for summary sheets, a tensor algebra
-primer, writing tips, and fun web resources.
+Besides Colab, you can run the notebooks on Binder or on your own computer.
 
-## Running the notebooks
-
-Click the Colab badge in any row above to run that notebook in your browser; nothing to install.
-Click the nbviewer badge to read it without running anything. Animations are not saved in the notebooks, so run the notebook in Colab to see them.
-
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ichristov/intermediate-fluid-mechanics/main)
-To run any notebook in the exact environment from `environment.yml`, without a Google account, launch the repository on Binder. It can take a few minutes to start.
+To run any notebook in the exact environment from `environment.yml`, without a Google account, launch the repository on Binder. [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ichristov/intermediate-fluid-mechanics/main) It can take a few minutes to start.
 
 To work locally instead:
 
@@ -90,6 +88,11 @@ jupyter lab
 ```
 
 ⚠️ The notebooks are unlikely to be robust and may require updates to run on different platforms, and as underlying Python libraries evolve.
+
+## 📝 Handy handouts
+
+Check out the [handouts](handouts) folder for summary sheets, a tensor algebra
+primer, writing tips, and fun web resources.
 
 ## 📖 How to cite
 
