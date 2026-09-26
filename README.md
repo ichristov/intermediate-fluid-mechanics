@@ -1,5 +1,11 @@
 # ME 50900 &ndash; Intermediate Fluid Mechanics at Purdue University
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22969555.svg)](https://doi.org/10.5281/zenodo.22969555)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
+[![Made with Jupyter](https://img.shields.io/badge/Made%20with-Jupyter-orange?logo=jupyter&logoColor=white)](https://jupyter.org)
+[![Last commit](https://img.shields.io/github/last-commit/ichristov/intermediate-fluid-mechanics)](https://github.com/ichristov/intermediate-fluid-mechanics/commits/main)
+[![GitHub stars](https://img.shields.io/github/stars/ichristov/intermediate-fluid-mechanics?style=social)](https://github.com/ichristov/intermediate-fluid-mechanics)
+
 Jupyter notebooks for ME 50900 &ndash; Intermediate Fluid Mechanics at Purdue University taught by Prof. [Ivan C. Christov](https://christov.tmnt-lab.org).
 The notebooks cover tensors, kinematics, unidirectional flows, the Navier&ndash;Stokes equations, ideal flow, dimensional analysis, similarity solutions, boundary layers, Stokes flow, and lubrication theory, using Python with SymPy for symbolic calculations and Matplotlib for visualizations.
 They serve as hands-on demos in lectures, problem-set solutions, and enrichment activities, and each one opens in Google Colab with nothing to install.
@@ -71,6 +77,9 @@ primer, writing tips, and fun web resources.
 Click the Colab badge in any row above to run that notebook in your browser; nothing to install.
 Click the nbviewer badge to read it without running anything. Animations are not saved in the notebooks, so run the notebook in Colab to see them.
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ichristov/intermediate-fluid-mechanics/main)
+To run any notebook in the exact environment from `environment.yml`, without a Google account, launch the repository on Binder. It can take a few minutes to start.
+
 To work locally instead:
 
 ```bash
@@ -81,6 +90,14 @@ jupyter lab
 ```
 
 ⚠️ The notebooks are unlikely to be robust and may require updates to run on different platforms, and as underlying Python libraries evolve.
+
+## 📖 How to cite
+
+If you use these notebooks in your teaching or research, please cite them as:
+
+I. C. Christov, _ME 50900 &ndash; Intermediate Fluid Mechanics at Purdue University: Jupyter notebooks_, Zenodo, 2026. [doi:10.5281/zenodo.22969555](https://doi.org/10.5281/zenodo.22969555)
+
+This DOI always points to the latest version. Each release also has its own DOI, listed on the Zenodo page. For BibTeX or APA, use the **Cite this repository** button on the right side of the repository page.
 
 ## 📚 Some resources for self-learning Jupyter, Python, and $\LaTeX$
 

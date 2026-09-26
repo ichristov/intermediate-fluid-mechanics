@@ -15,8 +15,9 @@ authors:
     orcid: "https://orcid.org/0000-0001-8531-0531"
     affiliation: Purdue University
 repository-code: "https://github.com/ichristov/intermediate-fluid-mechanics"
-url: "https://engineering.purdue.edu/ME509/"
 license: GPL-3.0-only
+doi: 10.5281/zenodo.22969555
+date-released: 2026-09-26
 keywords:
   - fluid mechanics
   - fluid dynamics
