@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use these materials, please cite them as below."
 type: software
-title: "ME 50900 – Intermediate Fluid Mechanics at Purdue University: Jupyter notebooks"
+title: "ME 50900 – Intermediate Fluid Mechanics – Computational Lecturebook"
 abstract: >-
   Jupyter notebooks for ME 50900, Intermediate Fluid Mechanics, at Purdue
   University. The notebooks cover tensors, kinematics, unidirectional flows,

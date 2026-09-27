@@ -6,9 +6,9 @@
 [![Last commit](https://img.shields.io/github/last-commit/ichristov/intermediate-fluid-mechanics)](https://github.com/ichristov/intermediate-fluid-mechanics/commits/main)
 [![GitHub stars](https://img.shields.io/github/stars/ichristov/intermediate-fluid-mechanics?style=social)](https://github.com/ichristov/intermediate-fluid-mechanics)
 
-![Schematic of four flows from the course, under the printed text ME 50900, Intermediate Fluid Mechanics, Purdue University, Computational lecturebook. Left to right: a family of velocity profiles between two parallel walls; velocity profiles spreading upward from a suddenly moved plate over time; three curves starting at a wall, one decaying with height, one leveling off at a constant value, and one growing without bound; and a sequence of eddies in a wedge that opens upward, alternating in color and shrinking toward the corner at the bottom.](assets/cover.png)
+![Schematic of four flows from the course, under the printed text ME 50900, Intermediate Fluid Mechanics, Purdue University, Computational Lecturebook. Left to right: a family of velocity profiles between two parallel walls; velocity profiles spreading upward from a suddenly moved plate over time; three curves starting at a wall, one decaying with height, one leveling off at a constant value, and one growing without bound; and a sequence of eddies in a wedge that opens upward, alternating in color and shrinking toward the corner at the bottom.](assets/cover.png)
 
-Jupyter-based computational lecturebook for ME 50900 &ndash; Intermediate Fluid Mechanics at Purdue University as taught by Prof. [Ivan C. Christov](https://christov.tmnt-lab.org).
+Jupyter-based computational lecturebook for ME 50900 &ndash; Intermediate Fluid Mechanics at Purdue University, as taught by Prof. [Ivan C. Christov](https://christov.tmnt-lab.org).
 The notebooks cover tensors, kinematics, unidirectional flows, the Navier&ndash;Stokes equations, dimensional analysis, similarity solutions, ideal flow, boundary layers, Stokes flow, and lubrication theory, using Python with SymPy for symbolic calculations and Matplotlib for visualizations.
 They serve as hands-on demos in lectures, problem-set solutions, and enrichment activities, and each one opens in Google Colab with nothing to install.
 
@@ -100,7 +100,7 @@ primer, writing tips, and fun web resources.
 
 If you use these notebooks in your teaching or research, please cite them as:
 
-I. C. Christov, _ME 50900 &ndash; Intermediate Fluid Mechanics at Purdue University: Jupyter notebooks_, Zenodo, 2026. [doi:10.5281/zenodo.22969555](https://doi.org/10.5281/zenodo.22969555)
+I. C. Christov, _ME 50900 &ndash; Intermediate Fluid Mechanics &ndash; Computational Lecturebook_, Zenodo, 2026. [doi:10.5281/zenodo.22969555](https://doi.org/10.5281/zenodo.22969555)
 
 This DOI always points to the latest version. Each release also has its own DOI, listed on the Zenodo page. For BibTeX or APA, use the **Cite this repository** button on the right side of the repository page.
 
