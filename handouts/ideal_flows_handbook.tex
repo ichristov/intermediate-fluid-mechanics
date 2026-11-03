@@ -15,9 +15,12 @@
 
 \usepackage[pdftitle={Ideal Flows Handbook}, pdflang=en-US]{hyperref}
 
-\usepackage[tiny]{titlesec}
-\titlespacing*{\section}{0pt}{4pt}{8pt}
-\titleformat{\section}[block]{\centering\normalfont\large\bfseries}{}{0pt}{}
+% titlesec's \titleformat is ignored with \DocumentMetadata, so use the kernel's heading template
+\EditInstance{heading}{section}{
+  before-vspace = 4pt,
+  after-vspace  = 8pt,
+  heading-decls = \centering\normalfont\large\bfseries
+}
 \usepackage[margin=0.5in]{geometry}
 \usepackage{pdflscape}
 
@@ -102,7 +105,7 @@
 {\noindent Purdue University, ME 50900 \hfill Prof.\ Ivan C.\ Christov}\\[-2.5mm]
 \noindent\makebox[\textwidth]{\rule{\textwidth}{0.5pt}}
 
-\section*{A Brief Handbook of Elementary Ideal Flows\blfootnote{Inspired by Tables 12.1 and 12.2 of Granger's \emph{Fluid Mechanics} (Dover Publications, 2012). Flow \circled{1.}~--~\circled{5.} are the ``building blocks'' and the rest are superposition examples.}}
+\section*{A Brief Handbook of Elementary Ideal Flows}\blfootnote{Inspired by Tables 12.1 and 12.2 of Granger's \emph{Fluid Mechanics} (Dover Publications, 2012). Flows \circled{1.}~--~\circled{5.} are the ``building blocks'' and the rest are superposition examples.}
 
 \noindent
 \tagpdfsetup{table/header-rows={1}}%
@@ -206,7 +209,7 @@
  \\
 \midrule
 
-\makecell[l]{\circled{5.} Flow in a corner of angle $\pi/n$ ($n>1/2$)\\ \phantom{\circled{5.}} $1<n<2$: flows past wedges of angle $2\pi\frac{n-1}{n}$ \\ \phantom{\circled{5.}}  $n=2$: stagnation-point flow onto a horizontal plate} & \makecell[l]{$A z^{n}$\\ ~ \\ \phantom{$U$}} & \makecell[l]{ \textcolor{gray}{[inconventient to use Cartesian coords]} \\ ~ \\ or $U r^n \cos(n\theta)$} & \makecell[l]{ \textcolor{gray}{[inconventient to use Cartesian coords]} \\ ~ \\ or $U r^n \sin(n\theta)$} &
+\makecell[l]{\circled{5.} Flow in a corner of angle $\pi/n$ ($n>1/2$)\\ \phantom{\circled{5.}} $1<n<2$: flows past wedges of angle $2\pi\frac{n-1}{n}$ \\ \phantom{\circled{5.}}  $n=2$: stagnation-point flow onto a horizontal plate} & \makecell[l]{$A z^{n}$\\ ~ \\ \phantom{$U$}} & \makecell[l]{ \textcolor{gray}{[inconvenient to use Cartesian coords]} \\ ~ \\ or $U r^n \cos(n\theta)$} & \makecell[l]{ \textcolor{gray}{[inconvenient to use Cartesian coords]} \\ ~ \\ or $U r^n \sin(n\theta)$} &
 \begin{tikzpicture}[scale=1, baseline=8ex]
     % Define angle
     \def\angle{45}
